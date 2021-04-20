@@ -1,0 +1,307 @@
+.dark-theme .shop
+  &__tournament
+    background-color: #061019
+    &-image
+      &[data-image="main"]
+        background-image: url('../img/illustrations/main-dark.svg')
+  &__categories
+    background-color: #061019
+  &__item
+    background-color: #061019
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2)
+
+.shop
+  padding: 100px 0
+  &__content
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    padding-top: 70px
+  &__aside
+    flex-shrink: 0
+    width: 270px
+  &__categories
+    margin-bottom: 30px
+    padding-bottom: 20px
+    border-radius: 20px
+    background-color: var(--bg-secondary)
+    &-title
+      padding: 20px 30px
+      line-height: 1.2
+      font:
+        family: 'Roketfont', Helvetica, sans-serif
+        size: 24px
+    &-item
+      padding: 8px 30px
+      cursor: pointer
+      font-size: 16px
+      &:not(:last-child)
+        margin-bottom: 10px
+      &--active
+        pointer-events: none
+        background-color: $blue
+        color: $white
+  &__tournament
+    display: block
+    padding: 30px 20px
+    border-radius: 20px
+    background-color: var(--bg-secondary)
+    &:hover
+      opacity: 1 !important
+    .heading
+      margin-bottom: 20px
+      font-size: 36px
+    &-image
+      width: 200px
+      height: 200px
+      margin-bottom: 15px
+      background:
+        size: contain
+        position: center
+        repeat: no-repeat
+      &[data-image="main"]
+        background-image: url('../img/illustrations/main.svg')
+    &-desc
+      margin-bottom: 30px
+    &-time
+      margin-bottom: 5px
+      font-size: 16px
+    &-date
+      white-space: nowrap
+      line-height: 1.2
+      font:
+        family: 'Roketfont', Helvetica, sans-serif
+        size: 36px
+  &__grid
+    position: relative
+    display: none
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: flex-start
+    width: 900px
+    margin-top: -30px
+    margin-right: -15px
+    &[data-grid="1"]
+      display: flex
+  &__item
+    width: 270px
+    height: 420px
+    margin: 30px 15px 0 15px
+    padding: 20px 20px 25px
+    border-radius: 20px
+    box-shadow: 0px 10px 40px rgba(212, 219, 230, 0.2)
+    background-color: var(--bg-secondary)
+    &:hover
+      opacity: 1 !important
+    &-image
+      display: block
+      max-width: 230px
+      width: auto
+      height: 230px
+      margin: 0 auto 15px
+      border-radius: 20px
+    &-info
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: flex-start
+    &-about
+      display: flex
+      flex-flow: column nowrap
+      justify-content: center
+      align-items: flex-start
+    &-price
+      margin-bottom: 5px
+      color: $blue
+      text-transform: uppercase
+      line-height: 1.44
+      font:
+        size: 16px
+        weight: 600
+    &-chosen
+      font-size: 14px
+      span
+        color: $green
+    &-name
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      height: 57px
+      margin-bottom: 20px
+      font:
+        size: 24px
+        weight: 700
+    &-icon
+      flex-shrink: 0
+      width: 60px
+      height: 60px
+      border-radius: 50%
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2)
+      background:
+        image: url('../img/icons/basket.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__popup
+    position: absolute
+    left: 15px
+    display: none
+    width: 900px
+    padding: 30px
+    border-radius: 20px
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2)
+    background-color: var(--bg-secondary)
+    &-close
+      position: absolute
+      left: -20px
+      top: 50%
+      display: none
+      width: 45px
+      height: 45px
+      transform: translateY(-50%)
+      cursor: pointer
+      background:
+        image: url('../img/icons/close.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-inner
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: stretch
+    &-gallery
+      flex-shrink: 0
+      width: 340px
+      margin-right: 30px
+      &-image
+        width: 100%
+        height: 350px
+        border-radius: 20px
+        background:
+          size: cover
+          position: center
+          repeat: no-repeat
+      &-thumbnails
+        display: flex
+        flex-flow: row wrap
+        justify-content: flex-start
+        align-items: flex-start
+        width: calc(100% + 20px)
+        margin-left: -10px
+      &-thumbnail
+        width: 100px
+        height: 70px
+        margin: 20px 10px 0 10px
+        border-radius: 10px
+        transition: all .3s ease
+        cursor: pointer
+        background:
+          size: cover
+          position: center
+          repeat: no-repeat
+        &--active
+          pointer-events: none
+          border: 1px solid $blue
+    &-info
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: flex-start
+      width: 470px
+    &-heading
+      margin-bottom: 20px
+      line-height: 1.2
+      font:
+        family: 'Roketfont', Helvetica, sans-serif
+        size: 36px
+    &-tags
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      margin-bottom: 25px
+    &-price,
+    &-chosen
+      padding: 9px 24px
+      border-radius: 20px
+      color: $white
+      text-transform: uppercase
+      letter-spacing: 0.13em
+      font-size: 14px
+    &-price
+      margin-right: 15px
+      background-color: $blue
+    &-chosen
+      background-color: $green
+    &-desc
+      color: var(--text-secondary)
+      line-height: 1.55
+    &-actions
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+      margin-top: auto
+    &-reg
+      color: var(--text-secondary)
+      font-size: 16px
+    .shop__item-info
+      display: none
+
+@media only screen and (max-width: $mobile)
+  .shop
+    padding: 40px 0 50px
+    &__content
+      flex-flow: column-reverse nowrap
+      padding-top: 0
+    &__categories
+      display: none
+    &__aside
+      padding-top: 30px
+      margin: 0 auto
+    &__grid
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: stretch
+      width: 100%
+      margin: 0
+      padding-top: 20px
+    &__item
+      margin: 30px auto 0
+      &-price
+        margin-bottom: 5px
+      &-name
+        font-size: 20px
+      &-icon
+        margin-left: 20px
+    &__popup
+      position: relative
+      top: 35px !important
+      left: 0
+      width: 270px
+      margin: 0 auto 30px
+      padding: 40px 20px 25px
+      &-close
+        top: -20px
+        left: 50%
+        transform: translateX(-50%)
+      &-inner
+        flex-flow: column nowrap
+      &-info
+        width: 100%
+      &-gallery
+        display: none
+      &-heading
+        font-size: 24px
+      &-tags
+        display: none
+      &-desc
+        margin-bottom: 10px
+        font-size: 16px
+      &-actions
+        display: none
+      .shop__item-info
+        display: flex

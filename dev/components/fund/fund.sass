@@ -1,0 +1,134 @@
+.dark-theme .fund
+  &__image
+    &-pic
+      background-image: url('../img/illustrations/fund-dark.svg')
+  
+.fund
+  position: relative
+  padding: 130px 0
+  background-color: var(--bg-secondary)
+  &__image
+    z-index: 1
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    &-inner
+      position: relative
+      max-width: 1430px
+      width: 100%
+      margin: 0 auto
+      padding-top: 80px
+    &-line
+      position: absolute
+      width: 20px
+      height: 3px
+      border-radius: 3px
+      background-color: $blue
+      &[data-line="1"]
+        top: 241px
+        left: 133px
+        transform: rotate(47deg)
+      &[data-line="2"]
+        top: 214px
+        left: 181px
+        transform: rotate(51deg)
+        animation: line 5s ease infinite
+    &-arrow
+      position: absolute
+      top: 50px
+      left: 0
+      width: 202px
+      height: 227px
+      animation: arrow 5s ease infinite
+      background:
+        image: url('../img/illustrations/arrow.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-pic
+      position: relative
+      width: 560px
+      height: 610px
+      margin: -50px -180px 0 auto
+      background:
+        image: url('../img/illustrations/fund.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__wrapper
+    z-index: 2
+    position: relative
+  &__content
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    .heading
+      margin-bottom: 50px
+  &__about
+    width: 320px
+    margin-right: 50px
+  &__amount
+    line-height: 1.2
+    color: $blue
+    font:
+      family: 'Roketfont', Helvetica, sans-serif
+      size: 110px
+    &--mobile
+      display: none
+
+@keyframes arrow
+  0%, 70%
+    transform: translate(0, 0)
+  10%
+    transform: translate(-10px, -10px)
+
+@keyframes line
+  0%, 70%
+    transform: translate(0, 0) rotate(51deg)
+  10%
+    transform: translate(-2px, 0px) rotate(50deg)
+
+@media only screen and (max-width: $mobile)
+  .fund
+    display: flex
+    flex-flow: column-reverse nowrap
+    justify-content: flex-start
+    align-items: stretch
+    padding: 50px 0 70px
+    &__image
+      position: static
+      max-width: 400px
+      width: 100%
+      margin: 0 auto
+      padding: 0 15px
+      &-inner
+        padding: 0
+      &-pic
+        margin: 0
+        width: 117%
+        height: 0
+        margin-left: -20px
+        padding-top: 126%
+      &-arrow
+        top: 11%
+        left: 3%
+        width: 35%
+        height: 0
+        padding-top: 36%
+      &-line
+        display: none
+    &__about
+      width: 100%
+      margin-right: 0
+      .heading
+        margin-bottom: 0
+        text-align: center
+    &__amount
+      display: none
+      &--mobile
+        display: block
+        margin: 30px 0
+        text-align: center
+        font-size: 60px

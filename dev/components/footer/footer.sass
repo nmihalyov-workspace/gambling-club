@@ -1,0 +1,161 @@
+.dark-theme .footer
+  &__logo
+    background-image: url('../img/logo-dark.svg')
+  &__btn
+    &:before
+      background-image: url('../img/icons/tg-dark.svg')
+    &:hover:before
+      background-image: url('../img/icons/tg.svg')
+  &__payment[data-method="gpwa"]
+    background-image: url('../img/icons/gpwa-dark.svg')
+  
+.footer
+  &__top
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    padding: 100px 0 45px
+    border-bottom: 2px solid transparentize(#9DAFC1, 0.8)
+  &__info
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+  &__logo
+    width: 189px
+    height: 37px
+    background:
+      image: url('../img/logo.svg')
+      size: contain
+      position: center
+      repeat: no-repeat
+  &__nav
+    &-link
+      margin-left: 30px
+  &__btn
+    position: relative
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    width: 210px
+    height: 50px
+    padding: 10px 10px 10px 30px
+    border-radius: 20px
+    border: 1px solid var(--text-primary)
+    text-align: center
+    line-height: 1.61
+    transition: all .3s ease
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 15px
+      left: 25px
+      width: 20px
+      height: 16px
+      transition: all .3s ease
+      background:
+        image: url('../img/icons/tg.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &:hover
+      background-color: var(--text-primary)
+      color: var(--bg-secondary)
+      &:before
+        background-image: url('../img/icons/tg-dark.svg')
+    &:active
+      transition: none
+      border-color: var(--text-secondary)
+      background-color: var(--text-secondary)
+  &__bottom
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    padding: 40px 0 100px
+  &__copyright
+    position: relative
+    padding-left: 30px
+    color: #0E2B49
+    &:before
+      position: absolute
+      content: ''
+      display: block
+      position: absolute
+      top: 2px
+      left: 0
+      width: 20px
+      height: 20px
+      background:
+        image: url('../img/icons/copyright.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__payments
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+  &__payment
+    margin-left: 50px
+    background:
+      size: contain
+      position: center
+      repeat: no-repeat
+    &[data-method="paypal"]
+      width: 27px
+      height: 27px
+      background-image: url('../img/icons/paypal.svg')
+    &[data-method="webmoney"]
+      width: 27px
+      height: 27px
+      background-image: url('../img/icons/webmoney.svg')
+    &[data-method="mastercard"]
+      width: 42px
+      height: 42px
+      background-image: url('../img/icons/mastercard.svg')
+    &[data-method="visa"]
+      width: 42px
+      height: 13px
+      margin-left: 43px
+      background-image: url('../img/icons/visa.svg')
+    &[data-method="gpwa"]
+      width: 56px
+      height: 26px
+      background-image: url('../img/icons/gpwa.svg')
+
+@media only screen and (max-width: $mobile)
+  .footer
+    padding: 40px 0
+    &__top
+      flex-flow: column nowrap
+      padding: 0 0 20px
+    &__info
+      flex-flow: column nowrap
+    &__logo
+      width: 193px
+      height: 40px
+      margin-bottom: 20px
+    &__nav
+      &-link
+        display: block
+        width: 100%
+        margin: 0 0 20px
+        text-align: center
+    &__btn
+      width: 100%
+      height: 70px
+      &:before
+        top: 25px
+        left: calc(50% - 90px)
+    &__bottom
+      flex-flow: column-reverse nowrap
+      padding: 20px 0 0
+    &__payments
+      width: 100%
+      margin-bottom: 20px
+    &__payment
+      margin: 0 !important

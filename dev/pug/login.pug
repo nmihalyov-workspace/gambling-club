@@ -1,0 +1,14 @@
+include ../components/preloader/preloader
+include ../components/login/login
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Вход | Gambling Club
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body.login-page
+    +preloader
+    .page-wrapper
+      +login

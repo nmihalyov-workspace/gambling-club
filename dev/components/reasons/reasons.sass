@@ -1,0 +1,189 @@
+.dark-theme .reasons
+  &__item
+    &-partners
+      background-image: url('../img/illustrations/partners-dark.svg')
+    &-eye
+      background-image: url('../img/illustrations/eye-dark.svg')
+    &-awards
+      background-image: url('../img/illustrations/awards-dark.svg')
+    &-bonus
+      background-image: url('../img/illustrations/bonus-dark.svg')
+  
+.reasons
+  padding: 100px 0
+  background-color: var(--bg-secondary)
+  &__grid
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: stretch
+    padding-top: 70px
+  &__item
+    width: 370px
+    &-image
+      position: relative
+      margin-bottom: -65px
+    &-partners
+      width: 316px
+      height: 310px
+      margin-left: 24px
+      background:
+        image: url('../img/illustrations/partners.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-eye
+      position: absolute
+      top: 59px
+      left: 205px
+      width: 7px
+      height: 5px
+      animation: blink 3s linear infinite
+      background:
+        image: url('../img/illustrations/eye.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-awards
+      width: 304px
+      height: 310px
+      margin-left: 33px
+      background:
+        image: url('../img/illustrations/awards.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-star
+      position: absolute
+      background:
+        size: contain
+        position: center
+        repeat: no-repeat
+      &[data-star="1"]
+        top: 84px
+        left: 66px
+        width: 34px
+        height: 34px
+        animation: pulse 2s linear infinite
+        background-image: url('../img/illustrations/star-1.svg')
+      &[data-star="2"]
+        top: 23px
+        left: 240px
+        width: 58px
+        height: 58px
+        animation: pulse 2s linear infinite .3s
+        background-image: url('../img/illustrations/star-2.svg')
+      &[data-star="3"]
+        top: 110px
+        left: 283px
+        width: 28px
+        height: 28px
+        animation: pulse 2s linear infinite .7s
+        background-image: url('../img/illustrations/star-3.svg')
+    &-bonus
+      z-index: 2
+      position: relative
+      width: 328px
+      height: 310px
+      margin-left: 18px
+      background:
+        image: url('../img/illustrations/bonus.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-bill
+      z-index: 1
+      position: absolute
+      top: 23px
+      left: 160px
+      width: 34px
+      height: 51px
+      animation: flutter 2.5s linear infinite
+      transform-origin: bottom left
+      background:
+        image: url('../img/illustrations/bill.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-card
+      z-index: 3
+      position: relative
+      padding: 20px 50px 20px 20px
+      border-radius: 20px
+      background-color: transparentize(#0E2B49, 0.25)
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2)
+      backdrop-filter: blur(8px)
+      color: $white
+    &-heading
+      margin-bottom: 5px
+      line-height: 1.3
+      font:
+        size: 24px
+        weight: 600
+
+@keyframes blink
+  0%, 20%
+    transform: scaleY(1)
+  10%
+    transform: scaleY(0.2)
+
+@keyframes pulse
+  0%, 100%
+    transform: scale(1)
+  50%
+    transform: scale(1.2)
+
+@keyframes flutter
+  0%, 100%
+    transform: skewX(0)
+  50%
+    transform: skewX(10deg)
+
+@media only screen and (max-width: $mobile)
+  .reasons
+    padding: 40px 0 50px
+    .heading
+      text-align: center
+    &__grid
+      flex-flow: column nowrap
+    &__item
+      width: 100%
+      &:not(:last-child)
+        margin-bottom: 30px
+      &-card
+        padding: 20px
+      &-heading
+        font-size: 18px
+      &-desc
+        font-size: 16px
+      &-image
+        margin-bottom: -20%
+      &-partners
+        width: 90%
+        height: 0
+        margin-left: 7.7%
+        padding-top: 74%
+      &-eye
+        top: 16%
+        left: 58.5%
+        height: 4px
+      &-awards
+        width: 100%
+        margin-left: 0
+      &-star
+        &[data-star="1"]
+          left: 13%
+        &[data-star="2"]
+          left: 70%
+        &[data-star="3"]
+          left: 80%
+      &-bonus
+        width: 100%
+        height: auto
+        margin-left: 0
+        padding-top: 107%
+      &-bill
+        top: 10.5%
+        left: 43%
+        width: 11%
+        height: 16%

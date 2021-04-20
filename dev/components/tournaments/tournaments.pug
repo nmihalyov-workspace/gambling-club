@@ -1,0 +1,44 @@
+include ../_ui/heading/heading
+include ../_ui/table/table
+include ../_ui/button/button
+
+mixin tournaments
+  section.tournaments.container
+    .wrapper
+      +heading('Турниры')
+      .tournaments__grid
+        .tournaments__select.appear.js-appear(data-delay="0", data-direction="left")
+          .tournaments__select-item.tournaments__select-item--active.js-tournament(data-tournament="1")
+            .tournaments__select-item-head
+              p.tournaments__select-item-title Охота на хайроллера
+              p.tournaments__select-item-date до 31.02
+            p.tournaments__select-item-desc Победитель определяется по сумме GGR с привлечённых за период конкурса
+          .tournaments__select-item.js-tournament(data-tournament="2")
+            .tournaments__select-item-head
+              p.tournaments__select-item-title Добро пожаловать
+              p.tournaments__select-item-date до 31.02
+            p.tournaments__select-item-desc Победитель определяется по&nbsp;количеству привлеченных FD за&nbsp;период проведения
+          .tournaments__select-item.js-tournament(data-tournament="3")
+            .tournaments__select-item-head
+              p.tournaments__select-item-title Набор джентльмена
+              p.tournaments__select-item-date до 31.02
+            p.tournaments__select-item-desc Победит тот, кто потратит более 150 000 баллов в магазине подарков до 29.02
+        .tournaments__content.appear.js-appear(data-delay="150", data-direction="left")
+          .tournaments__content-table.js-tournament-table(data-tournament="1")
+            .tournaments__content-table-inner
+              +table
+            .tournaments__content-actions
+              +button('link', 'Принять участие', '', {link: 'tournament.html'})
+              a(href="tournaments.html").tournaments__content-link Смотреть турнирную таблицу
+          .tournaments__content-table.js-tournament-table(data-tournament="2")
+            .tournaments__content-table-inner
+              +table
+            .tournaments__content-actions
+              +button('link', 'Принять участие', '', {link: 'tournament.html'})
+              a(href="tournaments.html").tournaments__content-link Смотреть турнирную таблицу
+          .tournaments__content-table.js-tournament-table(data-tournament="3")
+            .tournaments__content-table-inner
+              +table
+            .tournaments__content-actions
+              +button('link', 'Принять участие', '', {link: 'tournament.html'})
+              a(href="tournaments.html").tournaments__content-link Смотреть турнирную таблицу

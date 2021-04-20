@@ -1,0 +1,14 @@
+include ../_ui/table/table
+
+mixin winners
+  section.winners.container
+    .winners__wrapper.wrapper
+      .winners__tabs
+        p.winners__tabs-item.winners__tabs-item--active.js-tab(data-tab="1") Прошлые победители
+        p.winners__tabs-item.js-tab(data-tab="2") На текущий момент
+      .winners__item.js-tab-content(data-tab="1")
+        p.winners__heading Прошлые победители
+        +table(true)
+      .winners__item.js-tab-content(data-tab="2")
+        p.winners__heading На текущий момент
+        +table(true)

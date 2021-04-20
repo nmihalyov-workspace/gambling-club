@@ -1,0 +1,29 @@
+.button
+  display: flex
+  flex-flow: row nowrap
+  justify-content: center
+  align-items: center
+  max-width: 235px
+  width: 100%
+  height: 65px
+  border-radius: 10px
+  border: none
+  text-decoration: none
+  cursor: pointer
+  outline: 0
+  font-size: 18px
+  background-color: $blue
+  color: $white
+  transition: all .3s ease
+  &:hover
+    background-color: darken($blue, 3)
+  &:active
+    transition: none
+    background-color: darken($blue, 6)
+  &--secondary
+    background-color: transparent
+    border: 2px solid $blue
+  
+@media only screen and (max-width: $mobile)
+  .button
+    max-width: 100%

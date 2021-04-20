@@ -1,0 +1,12 @@
+.appear
+  transition: all .3s ease-out
+  
+.js-appear
+  opacity: 0
+  transition: transform 1s ease-out
+  &[data-direction="up"]
+    transform: translateY(50px)
+  &[data-direction="left"]
+    transform: translateX(50px)
+  &[data-direction="right"]
+    transform: translateX(-50px)

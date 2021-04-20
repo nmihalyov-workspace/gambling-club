@@ -1,0 +1,30 @@
+include ../_ui/heading/heading
+
+mixin reasons
+  section.reasons.container
+    .wrapper
+      +heading('Почему мы?')
+      .reasons__grid
+        .reasons__item
+          .reasons__item-image.appear.js-appear(data-delay="0", data-direction="up")
+            .reasons__item-partners
+            .reasons__item-eye
+          .reasons__item-card
+            p.reasons__item-heading Наши партнёры проверены временем
+            p.reasons__item-desc Стабильно работают с 2002 года
+        .reasons__item
+          .reasons__item-image.appear.js-appear(data-delay="250", data-direction="up")
+            .reasons__item-awards
+            .reasons__item-star(data-star="1")
+            .reasons__item-star(data-star="2")
+            .reasons__item-star(data-star="3")
+          .reasons__item-card
+            p.reasons__item-heading Турниры и обширная система наград
+            p.reasons__item-desc Больше трафика - больше баллов
+        .reasons__item
+          .reasons__item-image.appear.js-appear(data-delay="500", data-direction="up")
+            .reasons__item-bonus
+            .reasons__item-bill
+          .reasons__item-card
+            p.reasons__item-heading Дополнительные <br>$50 при регистрации
+            p.reasons__item-desc Приятный приветственный бонус

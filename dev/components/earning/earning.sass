@@ -1,0 +1,99 @@
+.dark-theme .earning
+  &__stats
+    &-card
+      &:first-child
+        background-color: transparentize($blue, 0.5)
+      &:last-child
+        background-color: transparentize($green, 0.5)
+    &-image
+      background-image: url('../img/illustrations/earning-dark.svg')
+  
+.earning
+  padding: 100px 0
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-end
+  &__content
+    width: 570px
+  &__desc
+    margin-top: 20px
+    line-height: 1.61
+    color: var(--text-secondary)
+    a
+      color: $blue
+      font-weight: 600
+  &__stats
+    position: relative
+    margin: 0 -30px -50px 0
+    color: $white
+    &-image
+      position: absolute
+      right: 20px
+      bottom: 70px
+      width: 350px
+      height: 336px
+      background:
+        image: url('../img/illustrations/earning.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-cards
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-end
+      align-items: flex-end
+    &-card
+      height: 150px
+      margin-left: 30px
+      padding: 25px 30px
+      border-radius: 20px
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2)
+      backdrop-filter: blur(8px)
+      line-height: 1.2
+      font-family: 'Roketfont', Helvetica, sans-serif
+      &:first-child
+        background-color: transparentize($blue, 0.25)
+      &:last-child
+        background-color: transparentize($green, 0.25)
+    &-num
+      margin-bottom: 10px      
+      font-size: 54px
+    &-text
+      font-size: 24px
+
+@media only screen and (max-width: $mobile)
+  .earning
+    padding: 40px 0 50px
+    &__wrapper
+      flex-flow: column nowrap
+    &__content
+      flex-flow: column nowrap
+      width: 100%
+      margin-bottom: 50px
+    &__stats
+      width: 100%
+      margin: 0
+      &-image
+        position: static
+        width: 100%
+        height: 0
+        padding-top: 97%
+      &-cards
+        margin-top: -80px
+        justify-content: flex-start
+      &-card
+        margin: 0
+        padding: 30px 20px
+        &:first-child
+          width: calc(55% + 20px)
+        &:last-child
+          width: 55%
+          margin-left: -10%
+          background-color: transparentize($green, 0.2) !important
+      &-num
+        margin-bottom: 15px
+        font-size: 30px
+      &-text
+        font-size: 18px

@@ -1,0 +1,172 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+
+mixin shop
+  section.shop.container
+    .wrapper
+      +heading('Магазин подарков')
+      .shop__content
+        aside.shop__aside
+          .shop__categories
+            p.shop__categories-title Категории
+            p.shop__categories-item.shop__categories-item--active(data-grid="1") Популярное
+            p.shop__categories-item(data-grid="2") Электроника
+            p.shop__categories-item(data-grid="3") Автомобили
+            p.shop__categories-item(data-grid="4") Аксессуары
+            p.shop__categories-item(data-grid="5") Недвижимость
+            p.shop__categories-item(data-grid="6") Одежда и обувь
+            p.shop__categories-item(data-grid="7") Яхты
+          a(href="tournament.html").shop__tournament
+            .shop__tournament-image(data-image="main")
+            +heading('Главный по&nbsp;FD')
+            p.shop__tournament-desc Победитель определяется по количеству FD с привлечённых игроков за период конкурса
+            p.shop__tournament-time Время проведения турнира
+            p.shop__tournament-date 10.02 - 31.02
+        -for(let i = 1; i <= 7; i++)
+          .shop__grid(data-grid=i)
+            -for(let i = 1; i <= 9; i++)
+              a(href="#").shop__item
+                img(src=`img/inhtml/shop-item-${i}.png`, alt="").shop__item-image
+                if i <= 3
+                  p.shop__item-name Apple iPhone 11 Pro Vedro extra v
+                if i === 4
+                  p.shop__item-name Alfa Romeo Brera
+                if i === 5
+                  p.shop__item-name AirPods
+                if i === 6
+                  p.shop__item-name Ferrari Roma
+                if i === 7
+                  p.shop__item-name Квартира <br>в Москве
+                if i === 8
+                  p.shop__item-name Bentley <br>Continental GT
+                if i === 9
+                  p.shop__item-name Sunseeker 62
+                .shop__item-info
+                  .shop__item-about
+                    if i <= 3
+                      p.shop__item-price 1 500 500 GC
+                    if i === 4
+                      p.shop__item-price 7 900 GC
+                    if i === 5
+                      p.shop__item-price 150 GC
+                    if i === 6
+                      p.shop__item-price 5 000 GC
+                    if i === 7
+                      p.shop__item-price 499 GC
+                    if i === 8
+                      p.shop__item-price 250 000 GC
+                    if i === 9
+                      p.shop__item-price 1 499 999 GC
+                    p.shop__item-chosen выбрали <span>95 раз</span>
+                  .shop__item-icon
+              if i < 4
+                .shop__popup(style="top: 30px;")
+                  .shop__popup-close
+                  .shop__popup-inner
+                    .shop__popup-gallery
+                      .shop__popup-gallery-image(style="background-image: url('img/inhtml/gallery-item.png');")
+                      .shop__popup-gallery-thumbnails
+                        .shop__popup-gallery-thumbnail.shop__popup-gallery-thumbnail--active(style="background-image: url('img/inhtml/gallery-item.png');")
+                        .shop__popup-gallery-thumbnail(style="background-image: url('img/inhtml/gallery-item.png');")
+                        .shop__popup-gallery-thumbnail(style="background-image: url('img/inhtml/gallery-item.png');")
+                    .shop__popup-info
+                      p.shop__popup-heading Aston Martin DB9 Pro Max Extra Turbo S
+                      .shop__popup-tags
+                        .shop__popup-price 1 550 000 GC
+                        .shop__popup-chosen выбрали 95 раз
+                      p.shop__popup-desc Уникальная машина в виде телефона-айфона, сделанная для ценителей настоящего мобильного автолюбизма и обладающая неизмеримым шармом малого размера и зелёной иконкой звонилки
+                      .shop__popup-actions
+                        p.shop__popup-reg Регистрируйся, копи баллы, забирай подарки
+                        +button('link', 'Регистрация', '', {link: 'javascript:void(0)'})
+                    .shop__item-info
+                      .shop__item-about
+                        if i <= 3
+                          p.shop__item-price 1 500 500 GC
+                        if i === 4
+                          p.shop__item-price 7 900 GC
+                        if i === 5
+                          p.shop__item-price 150 GC
+                        if i === 6
+                          p.shop__item-price 5 000 GC
+                        if i === 7
+                          p.shop__item-price 499 GC
+                        if i === 8
+                          p.shop__item-price 250 000 GC
+                        if i === 9
+                          p.shop__item-price 1 499 999 GC
+                        p.shop__item-chosen выбрали <span>95 раз</span>
+                      .shop__item-icon
+              if i > 3 && i < 7
+                .shop__popup(style="top: 480px;")
+                  .shop__popup-close
+                  .shop__popup-inner
+                    .shop__popup-gallery
+                      .shop__popup-gallery-image(style="background-image: url('img/inhtml/gallery-item.png');")
+                      .shop__popup-gallery-thumbnails
+                        .shop__popup-gallery-thumbnail.shop__popup-gallery-thumbnail--active(style="background-image: url('img/inhtml/gallery-item.png');")
+                        .shop__popup-gallery-thumbnail(style="background-image: url('img/inhtml/gallery-item.png');")
+                        .shop__popup-gallery-thumbnail(style="background-image: url('img/inhtml/gallery-item.png');")
+                    .shop__popup-info
+                      p.shop__popup-heading Aston Martin DB9 Pro Max Extra Turbo S
+                      .shop__popup-tags
+                        .shop__popup-price 1 550 000 GC
+                        .shop__popup-chosen выбрали 95 раз
+                      p.shop__popup-desc Уникальная машина в виде телефона-айфона, сделанная для ценителей настоящего мобильного автолюбизма и обладающая неизмеримым шармом малого размера и зелёной иконкой звонилки
+                      .shop__popup-actions
+                        p.shop__popup-reg Регистрируйся, копи баллы, забирай подарки
+                        +button('link', 'Регистрация', '', {link: 'javascript:void(0)'})
+                    .shop__item-info
+                      .shop__item-about
+                        if i <= 3
+                          p.shop__item-price 1 500 500 GC
+                        if i === 4
+                          p.shop__item-price 7 900 GC
+                        if i === 5
+                          p.shop__item-price 150 GC
+                        if i === 6
+                          p.shop__item-price 5 000 GC
+                        if i === 7
+                          p.shop__item-price 499 GC
+                        if i === 8
+                          p.shop__item-price 250 000 GC
+                        if i === 9
+                          p.shop__item-price 1 499 999 GC
+                        p.shop__item-chosen выбрали <span>95 раз</span>
+                      .shop__item-icon
+              if i > 6
+                .shop__popup(style="top: 930px;")
+                  .shop__popup-close
+                  .shop__popup-inner
+                    .shop__popup-gallery
+                      .shop__popup-gallery-image(style="background-image: url('img/inhtml/gallery-item.png');")
+                      .shop__popup-gallery-thumbnails
+                        .shop__popup-gallery-thumbnail.shop__popup-gallery-thumbnail--active(style="background-image: url('img/inhtml/gallery-item.png');")
+                        .shop__popup-gallery-thumbnail(style="background-image: url('img/inhtml/gallery-item.png');")
+                        .shop__popup-gallery-thumbnail(style="background-image: url('img/inhtml/gallery-item.png');")
+                    .shop__popup-info
+                      p.shop__popup-heading Aston Martin DB9 Pro Max Extra Turbo S
+                      .shop__popup-tags
+                        .shop__popup-price 1 550 000 GC
+                        .shop__popup-chosen выбрали 95 раз
+                      p.shop__popup-desc Уникальная машина в виде телефона-айфона, сделанная для ценителей настоящего мобильного автолюбизма и обладающая неизмеримым шармом малого размера и зелёной иконкой звонилки
+                      .shop__popup-actions
+                        p.shop__popup-reg Регистрируйся, копи баллы, забирай подарки
+                        +button('link', 'Регистрация', '', {link: 'javascript:void(0)'})
+                    .shop__item-info
+                      .shop__item-about
+                        if i <= 3
+                          p.shop__item-price 1 500 500 GC
+                        if i === 4
+                          p.shop__item-price 7 900 GC
+                        if i === 5
+                          p.shop__item-price 150 GC
+                        if i === 6
+                          p.shop__item-price 5 000 GC
+                        if i === 7
+                          p.shop__item-price 499 GC
+                        if i === 8
+                          p.shop__item-price 250 000 GC
+                        if i === 9
+                          p.shop__item-price 1 499 999 GC
+                        p.shop__item-chosen выбрали <span>95 раз</span>
+                      .shop__item-icon

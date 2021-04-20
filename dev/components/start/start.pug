@@ -1,0 +1,19 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+
+mixin start
+  section.start.container
+    .wrapper
+      .start__head
+        +heading('Начни зарабатывать прямо сейчас')
+        .start__actions
+          a(href="#").start__link Войти
+          +button('link', 'Регистрация', '', {link: '#'})
+      .start__content
+        p.start__item.appear.js-appear(data-delay="0", data-direction="right") Более 6000 парнеров уже с нами
+        p.start__item.appear.js-appear(data-delay="150", data-direction="right") Работай из любого уголка мира
+        p.start__item.appear.js-appear(data-delay="300", data-direction="right") Забудь про ограничения дохода
+        p.start__item.appear.js-appear(data-delay="450", data-direction="right") Получи пожизненный пассивный доход
+      .start__actions.start__actions--mobile
+        a(href="#").start__link Войти
+        +button('link', 'Регистрация', '', {link: '#'})

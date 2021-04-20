@@ -1,0 +1,36 @@
+include ../_ui/button/button
+
+mixin login
+  section.login
+    .login__wrapper
+      .login__logo
+      .login__circle
+      .login__illustration
+      .login__success Вы успешно вошли
+      .login__error Ваш аккаунт не активирован
+      .login__grid
+        .login__info
+          h1.login__heading Добро пожаловать в&nbsp;сообщество профессионалов
+          p.login__sub Есть вопросы? <a href="mailto:info@gambling-club.com">info@gambling-club.com</a>
+        .login__card
+          form(action="", data-form="login").login__form
+            .login__form-head
+              p.login__form-title Вход
+              a(href="#").login__form-forgot Забыли пароль?
+              p.login__form-error Данные введены неверно
+            input(type="text", name="login", placeholder="Введите логин", required).login__input
+            input(type="password", name="password", placeholder="Введите пароль", required).login__input
+            .login__buttons
+              +button('submit', 'Войти', 'login__buttons-signin')
+              +button-secondary('link', 'Зарегистрироваться', 'login__buttons-signup', {link: 'javascript:void(0)'})
+          form(action="", data-form="signup").login__form
+            .login__form-head
+              p.login__form-title Регистрация
+              p.login__form-error Данные введены неверно
+            input(type="text", name="login", placeholder="Придумайте логин", required).login__input
+            input(type="password", name="password", placeholder="Придумайте пароль", required).login__input
+            input(type="email", name="email", placeholder="Введите почту", required).login__input
+            .login__buttons
+              +button-secondary('link', 'Войти', 'login__buttons-signin', {link: 'javascript:void(0)'})
+              +button('submit', 'Зарегистрироваться', 'login__buttons-signup')
+      p.login__sub.login__sub--mobile Есть вопросы?<br><a href="mailto:info@gambling-club.com">info@gambling-club.com</a>

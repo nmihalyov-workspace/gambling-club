@@ -1,0 +1,20 @@
+include ../components/preloader/preloader
+include ../components/header/header
+include ../components/policy/policy
+include ../components/start/start
+include ../components/footer/footer
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Политика | Gambling Club
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    +preloader
+    .page-wrapper
+      +header
+      +policy
+      +start
+      +footer

@@ -1,0 +1,11 @@
+mixin button(type, text, className, options)
+  if type === 'link'
+    a.button(class=`${className || ''}`, href=options.link)= text
+  else if type === 'submit'
+    button.button(type="submit", class=`${className || ''}`)= text
+
+mixin button-secondary(type, text, className, options)
+  if type === 'link'
+    a.button.button--secondary(class=`${className || ''}`, href=options.link)= text
+  else if type === 'submit'
+    button.button.button--secondary(type="submit", class=`${className || ''}`)= text

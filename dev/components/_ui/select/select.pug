@@ -1,0 +1,4 @@
+mixin select(options, name, className)
+  select(name=name, class=`${className || ''}`).select.js-select
+    -for(let i = 0; i < options.length; i++)
+      option(value=options[i].value)= options[i].label

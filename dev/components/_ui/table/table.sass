@@ -1,0 +1,78 @@
+.dark-theme .table
+  &__row
+    background-color: transparentize(#0E2B49, 0.5)
+    &-cell
+      &[data-cell="name"]
+        color: #9DAFC1
+  
+.table
+  width: 740px
+  &--small
+    width: 570px
+    .table
+      &__head-cell
+        &[data-cell="name"]
+          width: 235px
+        &[data-cell="players"]
+          width: 130px
+        &[data-cell="profit"]
+          width: 110px
+      &__row-cell
+        &[data-cell="name"]
+          width: 235px
+        &[data-cell="players"]
+          width: 130px
+        &[data-cell="profit"]
+          width: 110px
+  &__head
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    margin-bottom: 10px
+    padding-left: 20px
+    &-cell
+      color: #16314D
+      &[data-cell="place"]
+        width: 75px
+      &[data-cell="name"]
+        width: 285px
+      &[data-cell="players"]
+        width: 180px
+      &[data-cell="profit"]
+        width: 180px
+  &__row
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    height: 70px
+    padding-left: 20px
+    border-radius: 20px
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2)
+    backdrop-filter: blur(10px)
+    background-color: transparentize(#0E2B49, 0.25)
+    &:not(:last-child)
+      margin-bottom: 20px
+    &-cell
+      overflow: hidden
+      padding-right: 10px
+      white-space: nowrap
+      text-overflow: ellipsis  
+      &[data-cell="place"]
+        width: 30px
+        padding-right: 0
+        color: #9DAFC1
+      &[data-cell="avatar"]
+        width: 30px
+        padding-right: 0
+        margin-right: 15px
+      &[data-cell="name"]
+        width: 285px
+        color: #E0E6EF
+      &[data-cell="players"]
+        width: 180px
+        color: transparentize($green, 0.25)
+      &[data-cell="profit"]
+        width: 180px
+        color: $blue

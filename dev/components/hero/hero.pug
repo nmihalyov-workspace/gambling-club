@@ -1,0 +1,27 @@
+include ../_ui/button/button
+
+mixin hero
+  section.hero.container
+    .hero__wrapper.wrapper
+      .hero__inner
+        .hero__roulette
+        .hero__coin(data-coin="1")
+        .hero__coin(data-coin="2")
+        .hero__coin(data-coin="3")
+        .hero__coin(data-coin="4")
+        .hero__coin(data-coin="5")
+        .hero__jackpot
+        h1.hero__heading Международная партнёрская программа в&nbsp;мире гэмблинга
+        p.hero__desc Высокая конверсия в купе с честной комиссией, приправленная полной прозрачностью всех&nbsp;процессов и дорогими подарками
+        .hero__actions
+          .hero__buttons
+            +button('link', 'Стать партнёром', '', {link: 'javascript:void(0)'})
+            a(href="#").hero__link Рассчитать доход
+          .hero__cards
+            .hero__card
+              .hero__card-icon(data-icon="metrics")
+              p.hero__card-text Живая метрика
+            .hero__card
+              .hero__card-icon(data-icon="shaving")
+              p.hero__card-text Без шейвинга
+        p.hero__scroll листай ниже, чтобы узнать подробности

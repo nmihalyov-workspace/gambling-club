@@ -1,0 +1,33 @@
+include ../components/preloader/preloader
+include ../components/header/header
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Gambling Club
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    +preloader
+    .page-wrapper
+      +header
+      .container
+        .wrapper
+          ol
+            li
+              a(href="login.html") Вход
+            li
+              a(href="main.html") Главная
+            li
+              a(href="main-loged.html") Главная (вход выполнен)
+            li
+              a(href="tournaments.html") Турниры
+            li
+              a(href="tournament.html") Турнир
+            li
+              a(href="shop.html") Магазин
+            li
+              a(href="faq.html") Ответы на вопросы
+            li
+              a(href="policy.html") Политика конфиденциальности

@@ -1,0 +1,18 @@
+include ../_ui/heading/heading
+
+mixin earning
+  section.earning.container
+    .earning__wrapper.wrapper
+      .earning__content
+        +heading('Ты получишь всё, что заработаешь')
+        p.earning__desc.appear.js-appear(data-delay="0", data-direction="up") Прозрачная и живая отчётность по игрокам не даёт возможности скрывать что-либо, ты всегда держишь ситуацию под своим чутким контролем
+        p.earning__desc.appear.js-appear(data-delay="0", data-direction="up") Участвуя в <a href="#">турнирах</a>, зарабатывая баллы, продолжая лить трафик ты будешь поддерживать огненный темп роста лояльности, за что мы непременно тебя вознаградим чем-нибудь из ассортимента нашего <a href="#">магазина</a>
+      .earning__stats
+        .earning__stats-image.appear.js-appear(data-delay="0", data-direction="left")
+        .earning__stats-cards
+          .earning__stats-card.appear.js-appear(data-delay="150", data-direction="left")
+            p.earning__stats-num 35%
+            p.earning__stats-text RevShare
+          .earning__stats-card.appear.js-appear(data-delay="300", data-direction="left")
+            p.earning__stats-num 5%
+            p.earning__stats-text Sub-Affiliates

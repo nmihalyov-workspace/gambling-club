@@ -1,0 +1,27 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+
+mixin gifts
+  section.gifts.container
+    .gifts__wrapper.wrapper
+      .gifts__car.js-parallax(data-rellax-percentage="0.5")
+        .gifts__car-image
+        .gifts__car-blocks.js-parallax(data-rellax-speed="0.2", data-rellax-percentage="0.5")
+      .gifts__phone.js-parallax(data-rellax-percentage="0.5")
+        .gifts__phone-image
+        .gifts__phone-blocks.js-parallax(data-rellax-speed="0.2", data-rellax-percentage="0.5")
+      +heading('Получай подарки за трафик')
+      .appear.js-appear(data-delay="0", data-direction="up")
+        p.gifts__desc Приглашая игроков к нашим партнёрам ты зарабатываешь не только деньги, но и баллы GC, которые можешь сразу обменять на всё, что угодно - от нового телефона до квартиры в крупном городе, спорткара, или даже яхты
+        +button('link', 'Перейти в магазин', 'gifts__btn', {link: 'shop.html'})
+      .gifts__grid
+        .gifts__grid-waypoint
+        .gifts__item
+          .gifts__item-image.appear.js-appear(data-delay="0", data-direction="up", data-image="offers")
+          p.gifts__item-desc.appear.js-appear(data-delay="150", data-direction="up") Лей трафик <br>на офферы
+        .gifts__item
+          .gifts__item-image.appear.js-appear(data-delay="0", data-direction="up", data-image="points")
+          p.gifts__item-desc.appear.js-appear(data-delay="150", data-direction="up") Получай <br>баллы
+        .gifts__item
+          .gifts__item-image.appear.js-appear(data-delay="150", data-direction="up", data-image="spend")
+          p.gifts__item-desc.appear.js-appear(data-delay="150", data-direction="up") Трать их на всё, <br>что пожелаешь

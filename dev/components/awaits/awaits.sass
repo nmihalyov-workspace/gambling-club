@@ -1,0 +1,125 @@
+.dark-theme .awaits
+  &__block
+    background-color: transparentize($blue, 0.5)
+
+.awaits
+  padding: 100px 0 100px 0
+  background-color: var(--bg-secondary)
+  &__content
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    margin-top: -65px
+  &__block
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    width: 810px
+    height: 230px
+    padding: 0 260px 0 50px
+    border-radius: 20px
+    background-color: transparentize($blue, 0.25)
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2)
+    backdrop-filter: blur(10px)
+  &__text
+    color: $white
+    line-height: 1.2
+    font:
+      family: 'Roketfont', Helvetica, sans-serif
+      size: 54px
+  &__slider
+    position: relative
+    width: 300px
+    height: 540px
+    margin-left: -180px
+    &-inner
+      z-index: 4
+      position: relative
+  &__slide
+    overflow: hidden
+    position: absolute
+    top: 0
+    left: 0
+    width: 300px
+    height: 540px
+    border-radius: 20px
+    background-color: #9DAFC1
+    &:nth-child(1)
+      z-index: 3
+    &:nth-child(2)
+      z-index: 2
+      transform: scale(0.85) translateX(180px)
+      .awaits__slide-img
+        opacity: 0.5
+    &:nth-child(3)
+      z-index: 1
+      transform: scale(0.7) translateX(330px)
+      .awaits__slide-img
+        opacity: 0.15
+    &[data-slide="1"]
+      .awaits__slide-img
+        background-image: url('../img/inhtml/awaits-1.jpg')
+    &[data-slide="2"]
+      .awaits__slide-img
+        background-image: url('../img/inhtml/awaits-2.jpg')
+    &[data-slide="3"]
+      .awaits__slide-img
+        background-image: url('../img/inhtml/awaits-3.jpg')
+    &--hide
+      z-index: 4
+      animation: hide .5s ease
+    &--show
+      animation: show .5s ease
+    &-img
+      z-index: 2
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 540px
+      transition: all .3s ease
+      background:
+        position: center
+        size: cover
+        repeat: no-repeat
+
+@keyframes hide
+  0%
+    opacity: 1
+    transform: scale(1) translateX(0)
+  100%
+    opacity: 0
+    transform: scale(0.5) translateX(-200px)
+
+@keyframes show
+  0%
+    opacity: 0
+    transform: scale(0.5) translateX(-200px)
+  100%
+    opacity: 1
+    transform: scale(0.7) translateX(330px)
+
+@media only screen and (max-width: $mobile)
+  .awaits
+    padding: 40px 0 50px
+    &__content
+      position: relative
+      margin: 50px 0 0 0
+    &__block
+      z-index: 2
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 130px
+      padding: 25px
+    &__text
+      font-size: 30px
+    &__slider
+      z-index: 1
+      width: 100%
+      margin-left: 0
+    &__slide
+      width: 100%

@@ -1,0 +1,209 @@
+.dark-theme .gifts
+  &__car
+    &-blocks
+      background-image: url('../img/pictures/car-blocks-dark.png')
+  &__phone
+    &-blocks
+      background-image: url('../img/pictures/phone-blocks-dark.png')
+  &__grid
+    &-waypoint
+      background-image: url('../img/illustrations/waypoint-dark.svg')
+  &__item
+    &-image
+      &[data-image="offers"]
+        background-image: url('../img/illustrations/offers-dark.svg')
+      &[data-image="points"]
+        background-image: url('../img/illustrations/points-dark.svg')
+      &[data-image="spend"]
+        background-image: url('../img/illustrations/spend-dark.svg')
+  
+.gifts
+  padding: 100px 0 190px 0
+  background-color: var(--bg-secondary)
+  &__wrapper
+    position: relative
+  &__car
+    position: absolute
+    top: 520px
+    right: -335px
+    &-image
+      z-index: 3
+      position: relative
+      width: 528px
+      height: 240px
+      background:
+        image: url('../img/pictures/car.png')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-blocks
+      position: absolute
+      top: -120px
+      left: 45px
+      width: 487px
+      height: 475px
+      background:
+        image: url('../img/pictures/car-blocks.png')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__phone
+    position: absolute
+    top: 870px
+    left: -250px
+    &-image
+      z-index: 3
+      position: relative
+      width: 593px
+      height: 593px
+      background:
+        image: url('../img/pictures/iphone.png')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-blocks
+      position: absolute
+      top: 140px
+      right: 10px
+      width: 474px
+      height: 384px
+      background:
+        image: url('../img/pictures/phone-blocks.png')
+        size: contain
+        position: center
+        repeat: no-repeat
+  .heading
+    width: 550px
+    margin: 0 auto 20px
+    text-align: center
+  &__desc
+    width: 770px
+    margin: 0 auto 60px
+    color: var(--text-secondary)
+    text-align: center
+    line-height: 1.61
+  &__btn
+    margin: 0 auto
+  &__grid
+    position: relative
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    padding-top: 55px
+    &-waypoint
+      z-index: 1
+      position: absolute
+      top: 116px
+      left: 242px
+      width: 712px
+      height: 516px
+      background:
+        image: url('../img/illustrations/waypoint.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__item
+    z-index: 2
+    position: relative
+    &:nth-child(3)
+      padding-top: 270px
+      margin-right: 50px
+    &:last-child
+      margin-right: 50px
+      padding-top: 545px
+    &-image
+      background:
+        size: contain
+        position: center
+        repeat: no-repeat
+      &[data-image="offers"]
+        width: 293px
+        height: 149px
+        margin-bottom: 50px
+        background-image: url('../img/illustrations/offers.svg')
+      &[data-image="points"]
+        width: 246px
+        height: 256px
+        margin-bottom: -10px
+        background-image: url('../img/illustrations/points.svg')
+      &[data-image="spend"]
+        width: 322px
+        height: 282px
+        margin-bottom: -10px
+        background-image: url('../img/illustrations/spend.svg')
+    &-desc
+      text-align: center
+      line-height: 1.5
+      font:
+        size: 24px
+        weight: 600
+
+@media only screen and (max-width: $mobile)
+  .dark-theme .gifts
+    &__item
+      &:not(:last-child)
+        &:after
+          background-image: url('../img/illustrations/dash-dark.svg')
+  .gifts
+    padding: 40px 0 50px
+    &__phone
+      top: 1220px
+      left: -165px
+      &-image
+        width: 310px
+        height: 310px
+      &-blocks
+        top: 74px
+        right: 5px
+        width: 247px
+        height: 200px
+    &__car
+      top: 730px
+      right: -65px
+      &-image
+        width: 213px
+        height: 97px
+      &-blocks
+        top: -50px
+        right: -20px
+        width: 197px
+        height: 191px
+    .heading
+      width: 100%
+      margin-bottom: 20px
+      text-align: left
+    &__desc
+      width: 100%
+      margin-bottom: 30px
+      text-align: left
+    &__grid
+      flex-flow: column nowrap
+      padding-top: 50px
+      &-waypoint
+        display: none
+    &__item
+      width: 100%
+      padding-top: 0 !important
+      &:not(:last-child)
+        position: relative
+        margin-bottom: 260px
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          bottom: -240px
+          left: calc(50% - 1px)
+          width: 2px
+          height: 200px
+          background:
+            image: url('../img/illustrations/dash.svg')
+            size: contain
+            position: center
+            repeat: no-repeat
+      &-image
+        width: 100% !important
+        margin-bottom: 30px !important
+      &-desc
+        br
+          display: none

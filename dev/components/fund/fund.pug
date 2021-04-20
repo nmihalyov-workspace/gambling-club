@@ -1,0 +1,18 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+
+mixin fund
+  section.fund.container
+    .fund__image.appear.js-appear(data-delay="150", data-direction="left")
+      .fund__image-inner
+        .fund__image-pic
+          .fund__image-line(data-line="1")
+          .fund__image-line(data-line="2")
+          .fund__image-arrow
+    .fund__wrapper.wrapper
+      .fund__content
+        .fund__about
+          +heading('Общий призовой фонд')
+          p(data-delay="0", data-direction="up").fund__amount.fund__amount--mobile.appear.js-appear $30 000
+          +button('link', 'Участвовать', '', {link: 'javascript:void(0)'})
+        p(data-delay="0", data-direction="left").fund__amount.appear.js-appear $30 000

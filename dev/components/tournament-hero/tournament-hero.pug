@@ -1,0 +1,14 @@
+include ../_ui/heading/heading
+
+mixin tournament-hero
+  section.tournament-hero.container
+    .wrapper
+      .tournament-hero__card
+        .tournament-hero__card-content
+          div
+            +heading('Главный по&nbsp;FD')
+            p.tournament-hero__card-desc Победитель определяется по количеству FD с привлечённых игроков за период конкурса
+          div
+            p.tournament-hero__card-time Время проведения турнира
+            p.tournament-hero__card-date 10.02 - 31.02
+        .tournament-hero__card-image.appear.js-appear(data-image="main", data-delay="0", data-direction="left")

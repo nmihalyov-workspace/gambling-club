@@ -1,0 +1,84 @@
+mixin header(currentPage)
+  header.header.container
+    .header__wrapper.wrapper
+      a(href="main.html").header__logo
+      nav.header__nav
+        a(href="shop.html", class=`${currentPage === 'shop' ? 'header__nav-link--current' : ''}`).header__nav-link Магазин подарков
+        a(href="tournaments.html", class=`${currentPage === 'tournaments' ? 'header__nav-link--current' : ''}`).header__nav-link Турниры
+        a(href="faq.html", class=`${currentPage === 'faq' ? 'header__nav-link--current' : ''}`).header__nav-link FAQ
+      .header__theme.js-theme
+        .header__theme-light
+        .header__theme-switcher
+        .header__theme-dark
+      .header__language(data-language="eng")
+      //- .header__language(data-language="ru")
+      .header__actions
+        a(href="login.html").header__login Войти
+        a(href="login.html").header__signup Регистрация
+  header.header.header--mobile.container
+    .header__menu
+      nav.header__menu-nav
+        a(href="shop.html", class=`${currentPage === 'shop' ? 'header__nav-link--current' : ''}`).header__menu-nav-link Магазин подарков
+        a(href="tournaments.html", class=`${currentPage === 'tournaments' ? 'header__menu-nav-link--current' : ''}`).header__menu-nav-link Турниры
+        a(href="faq.html", class=`${currentPage === 'faq' ? 'header__nav-link--current' : ''}`).header__menu-nav-link FAQ
+      .header__menu-actions
+        a(href="login.html").header__login Войти
+        a(href="login.html").header__signup Регистрация
+        .header__language(data-language="eng")
+        //- .header__language(data-language="ru")
+    .header__wrapper.wrapper
+      .header__burger.js-burger
+        div
+        div
+        div
+        div
+      a(href="main.html").header__logo
+      .header__theme.js-theme
+        .header__theme-light
+        .header__theme-dark
+
+mixin header-loged(currentPage)
+  header.header.container
+    .header__wrapper.wrapper
+      a(href="main.html").header__logo
+      nav.header__nav
+        a(href="shop.html", class=`${currentPage === 'shop' ? 'header__nav-link--current' : ''}`).header__nav-link Магазин подарков
+        a(href="tournaments.html", class=`${currentPage === 'tournaments' ? 'header__nav-link--current' : ''}`).header__nav-link Турниры
+        a(href="faq.html", class=`${currentPage === 'faq' ? 'header__nav-link--current' : ''}`).header__nav-link FAQ
+      .header__theme.js-theme
+        .header__theme-light
+        .header__theme-switcher
+        .header__theme-dark
+      .header__user
+        .header__user-main
+          p.header__user-balance
+            span GC
+            |149 499 499
+          img(src="img/inhtml/avatar.png", alt="").header__user-avatar
+          .header__user-arrow
+        .header__user-sub
+          p.header__user-name SuperWebmaterDeveloper
+          a(href="#").header__user-link Перейти в ЛК
+          .header__user-sub-inner
+            .header__user-language(data-lang="ru") По-русски
+            .header__user-language(data-lang="eng") In English
+          a(href="#").header__user-logout Выйти
+  header.header.header--mobile.container
+    .header__menu
+      nav.header__menu-nav
+        a(href="shop.html", class=`${currentPage === 'shop' ? 'header__nav-link--current' : ''}`).header__menu-nav-link Магазин подарков
+        a(href="tournaments.html", class=`${currentPage === 'tournaments' ? 'header__menu-nav-link--current' : ''}`).header__menu-nav-link Турниры
+        a(href="faq.html", class=`${currentPage === 'faq' ? 'header__nav-link--current' : ''}`).header__menu-nav-link FAQ
+      .header__menu-actions
+        a(href="login.html").header__login Войти
+        a(href="login.html").header__signup Регистрация
+    .header__wrapper.wrapper
+      .header__burger.js-burger
+        div
+        div
+        div
+        div
+      a(href="main.html").header__logo
+      .header__theme.js-theme
+        .header__theme-light
+        .header__theme-dark

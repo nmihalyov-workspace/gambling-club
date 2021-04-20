@@ -1,0 +1,28 @@
+include ../_ui/select/select
+include ../_ui/table/table
+
+mixin reliable
+  section.reliable.container
+    .reliable__image
+      .reliable__image-inner
+        .reliable__image-speak(data-speak="1")
+        .reliable__image-speak(data-speak="2")
+        .reliable__image-pic
+    .wrapper
+      .reliable__head
+        +heading('Мы ищем надёжных людей')
+        p.reliable__desc.appear.js-appear(data-delay="0", data-direction="up") Нам важно долгосрочное сотрудничество, взаимопонимание и продуктивность ради обоюдной&nbsp;выгоды
+      .reliable__content
+        .reliable__partners.appear.js-appear(data-delay="0", data-direction="left")
+          p.reliable__partners-heading Топ партнёров
+          +select([{value: '1month', label: 'За один месяц'}, {value: '3month', label: 'За 3 месяца'}, {value: '6month', label: 'За 6 месяцев'}, {value: 'total', label: 'За все время'}], 'term', 'js-reliable-term')
+          p.reliable__partners-desc Рейтинговая система не только позволяет видеть возможности потенциальным партнёрам, но и даёт действующим уверенности в том, что они работают в сплочённой команде, каждый участник которой трудится не за просто так
+        .reliable__table.appear.js-appear(data-delay="150", data-direction="left")
+          .reliable__table-inner(data-table="1month")
+            +table
+          .reliable__table-inner(data-table="3month")
+            +table
+          .reliable__table-inner(data-table="6month")
+            +table
+          .reliable__table-inner(data-table="total")
+            +table

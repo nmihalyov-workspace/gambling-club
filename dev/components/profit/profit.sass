@@ -1,0 +1,203 @@
+.dark-theme .profit
+  &__tabs
+    &-content
+      &-inner
+        background: rgba(3, 17, 32, 0.5)
+        // background: transparentize(#263C53, 0.5)
+  
+.profit
+  padding: 100px 0
+  &__desc
+    width: 380px
+    margin: 20px 0 40px
+    line-height: 1.61
+    color: var(--text-secondary)
+  &__tabs
+    &-items
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      margin-bottom: 70px
+    &-item
+      position: relative
+      margin-right: 40px
+      padding-left: 35px
+      color: #59636E
+      cursor: pointer
+      transition: opacity .3 ease
+      &:hover
+        opacity: 0.8
+      &:before,
+      &:after
+        content: ''
+        position: absolute
+        display: block
+      &:before
+        top: 2px
+        left: 0
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        border: 2px solid #59636E
+        transition: border-color .3s ease
+      &:after
+        opacity: 0
+        top: 7px
+        left: 5px
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background-color: $blue
+        transition: opacity .3s ease
+      &--active
+        pointer-events: none
+        color: $blue
+        &:before
+          border-color: $blue
+        &:after
+          opacity: 1
+    &-content
+      &-chart
+        position: relative
+        &-month
+          position: absolute
+          left: 25px
+          bottom: 7px
+          color: #505F6E
+          font-size: 14px
+      &-inner
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        align-items: stretch
+        height: 405px
+        padding: 50px
+        border-radius: 20px
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2)
+        background: transparentize(#263C53, 0.25)
+        backdrop-filter: blur(10px)
+      &-actions
+        display: flex
+        flex-flow: column nowrap
+        justify-content: space-between
+        align-items: stretch
+        width: 310px
+  &__income
+    &-text
+      margin-bottom: 15px
+      color: #9DAFC1
+    &-value
+      color: $blue
+      line-height: 1
+      font:
+        family: 'Roketfont', Helvetica, sans-serif
+        size: 54px
+      span
+        color: $white
+  &__range
+    &:not(:last-child)
+      margin-bottom: 45px
+    &-desc
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 15px
+      line-height: 1.44
+      color: $white
+      font-weight: 300
+    &-value
+      font-weight: 500
+    .irs
+      height: 16px
+      margin-bottom: 5px
+      &-min,
+      &-max
+        display: none
+      &-line
+        top: 5px
+        height: 2px
+        border-radius: 2px
+        background-color: $white
+      &-bar
+        top: 5px
+        height: 2px
+        border-radius: 5px
+        background-color: $blue
+      &-single
+        display: none
+      &-handle
+        top: -4px
+        width: 20px
+        height: 20px
+        background-color: $white
+        box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.1)
+        border-radius: 50%
+        cursor: pointer
+        i
+          display: none !important
+
+#chartjs-tooltip
+  margin: 0 -10px -10px 0
+  padding: 15px 25px !important
+  border-radius: 10px
+  background-color: rgba(224, 230, 239, 0.75)
+  transform: translate(-90%, -90%)
+  white-space: nowrap
+  &:after
+    z-index: 
+    content: ''
+    display: block
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    background-color: #9DAFC1
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.1)
+  div
+    position: relative
+    z-index: 2
+  p:first-child
+    margin-bottom: 5px
+    color: #0E2B49
+    font:
+      family: 'Gilroy', Helvetica, sans-serif
+      size: 18px
+      weight: 400
+    span
+      color: $blue
+  p:last-child
+    color: #6F859A
+    font:
+      family: 'Gilroy', Helvetica, sans-serif
+      size: 14px
+
+@media only screen and (max-width: $mobile)
+  .profit
+    padding: 40px 0 50px
+    &__desc
+      width: 100%
+      margin-bottom: 50px
+    &__tabs
+      &-items
+        flex-flow: column nowrap
+        align-items: flex-start
+        margin-bottom: 30px
+      &-item
+        margin-bottom: 20px
+      &-content
+        &-inner
+          height: auto
+          padding: 30px 20px
+        &-actions
+          width: 100%
+        &-chart
+          display: none
+    &__range
+      margin-bottom: 30px
+    &__income
+      &-value
+        text-align: right

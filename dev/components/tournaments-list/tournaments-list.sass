@@ -1,0 +1,91 @@
+.dark-theme .tournaments-list
+  &__item-image
+    &[data-image="main"]
+      background-image: url('../img/illustrations/main-dark.svg')
+    &[data-image="hunt"]
+      background-image: url('../img/illustrations/hunt-dark.svg')
+    &[data-image="lucky"]
+      background-image: url('../img/illustrations/lucky-dark.svg')
+  
+.tournaments-list
+  padding: 100px 0
+  &__grid
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: stretch
+    width: calc(100% + 30px)
+    margin-left: -15px
+    padding-top: 40px
+  &__item
+    display: flex
+    flex-flow: column nowrap
+    width: 370px
+    margin: 30px 15px 0 15px
+    padding: 20px
+    background-color: var(--bg-secondary)
+    border-radius: 20px
+    &:not(.js-appear):hover
+      opacity: 1
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2)
+      .tournaments-list__item
+        &-desc
+          color: var(--text-primary)
+        &-btn
+          color: $white
+          background-color: $blue
+    &-image
+      width: 330px
+      height: 300px
+      margin-bottom: 25px
+      background:
+        size: contain
+        position: center
+        repeat: no-repeat
+      &[data-image="main"]
+        background-image: url('../img/illustrations/main.svg')
+      &[data-image="hunt"]
+        background-image: url('../img/illustrations/hunt.svg')
+      &[data-image="lucky"]
+        background-image: url('../img/illustrations/lucky.svg')
+    &-title
+      margin-bottom: 5px
+      font:
+        size: 24px
+        weight: 700
+    &-desc
+      margin-bottom: 25px
+      color: var(--text-secondary)
+      line-height: 1.44
+    &-btn
+      display: flex
+      flex-flow: row nowrap
+      justify-content: center
+      align-items: center
+      width: 100%
+      height: 65px
+      margin-top: auto
+      border: 2px solid $blue
+      border-radius: 10px
+      color: $blue
+
+@media only screen and (max-width: $mobile)
+  .tournaments-list
+    padding: 40px 0 50px
+    &__grid
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: stretch
+      width: 100%
+      margin: 0
+      padding-top: 20px
+    &__item
+      opacity: 1
+      transform: none !important
+      width: 100%
+      margin: 30px 0 0 0
+      padding: 40px 20px
+      &-image
+        width: 100%
+        height: 0
+        padding-top: 90%

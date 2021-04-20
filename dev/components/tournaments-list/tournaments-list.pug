@@ -1,0 +1,37 @@
+include ../_ui/heading/heading
+
+mixin tournaments-list
+  section.tournaments-list.container
+    .wrapper
+      +heading('Турниры')
+      .tournaments-list__grid
+        a(href="tournament.html", data-delay="0", data-direction="left").tournaments-list__item.appear.js-appear
+          .tournaments-list__item-image(data-image="main")
+          p.tournaments-list__item-title Главный по FD
+          p.tournaments-list__item-desc Победитель определяется по количеству FD с привлечённых игроков за период конкурса
+          span.tournaments-list__item-btn Подробнее
+        a(href="tournament.html", data-delay="150", data-direction="left").tournaments-list__item.appear.js-appear
+          .tournaments-list__item-image(data-image="hunt")
+          p.tournaments-list__item-title Охота на хайроллера
+          p.tournaments-list__item-desc Победитель определяется по сумме GGR игрока, привлечённого за период конкурса
+          span.tournaments-list__item-btn Подробнее
+        a(href="tournament.html", data-delay="300", data-direction="left").tournaments-list__item.appear.js-appear
+          .tournaments-list__item-image(data-image="lucky")
+          p.tournaments-list__item-title Везёт не по-детски
+          p.tournaments-list__item-desc Победитель определяется по сумме GGR с привлечённых игроков за период конкурса
+          span.tournaments-list__item-btn Подробнее
+        a(href="tournament.html", data-delay="0", data-direction="left").tournaments-list__item.appear.js-appear
+          .tournaments-list__item-image(data-image="main")
+          p.tournaments-list__item-title Главный по FD
+          p.tournaments-list__item-desc Победитель определяется по количеству FD с привлечённых игроков за период конкурса
+          span.tournaments-list__item-btn Подробнее
+        a(href="tournament.html", data-delay="150", data-direction="left").tournaments-list__item.appear.js-appear
+          .tournaments-list__item-image(data-image="hunt")
+          p.tournaments-list__item-title Охота на хайроллера
+          p.tournaments-list__item-desc Победитель определяется по сумме GGR игрока, привлечённого за период конкурса
+          span.tournaments-list__item-btn Подробнее
+        a(href="tournament.html", data-delay="300", data-direction="left").tournaments-list__item.appear.js-appear
+          .tournaments-list__item-image(data-image="lucky")
+          p.tournaments-list__item-title Везёт не по-детски
+          p.tournaments-list__item-desc Победитель определяется по сумме GGR с привлечённых игроков за период конкурса
+          span.tournaments-list__item-btn Подробнее

@@ -1,0 +1,126 @@
+.faq
+  padding: 100px 0
+  .heading
+    margin-bottom: 70px
+  &__item
+    width: 1190px
+    margin-left: -10px
+    border-radius: 20px
+    background-color: var(--bg-secondary)
+    &:not(:last-child)
+      margin-bottom: 30px
+    &-head
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+      padding: 40px
+      cursor: pointer
+      &--active
+        .faq__item-head-icon
+          &:after
+            transform: translate(-50%, -50%)
+      &-text
+        padding-right: 30px
+        line-height: 1.2
+        font:
+          family: 'Roketfont', Helvetica, sans-serif
+          size: 24px
+      &-icon
+        flex-shrink: 0
+        position: relative
+        width: 45px
+        height: 45px
+        border-radius: 50%
+        background-color: $blue
+        &:before,
+        &:after
+          position: absolute
+          content: ''
+          display: block
+          top: 50%
+          left: 50%
+          width: 16px
+          height: 2px
+          border-radius: 2px
+          background-color: $white
+        &:before
+          transform: translate(-50%, -50%)
+        &:after
+          transform: translate(-50%, -50%) rotate(90deg)
+          transition: transform .3s ease
+    &-content
+      display: none
+      padding: 0 40px 40px 40px
+      transition: none !important
+    &-grid
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: flex-start
+    &-col
+      width: 540px
+  &__inner
+    width: 100%
+    background-color: var(--bg-primary)
+    border-radius: 20px
+    &:not(:last-child)
+      margin-bottom: 30px
+    &-head
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+      padding: 20px 30px
+      cursor: pointer
+      &--active
+        .faq__inner-head-icon
+          transform: rotate(-180deg)
+      &-text
+        padding-right: 20px
+      &-icon
+        flex-shrink: 0
+        width: 16px
+        height: 9px
+        background:
+          image: url('../img/icons/caret-blue.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &-content
+      display: none
+      padding: 0 65px 30px 30px
+      color: var(--text-secondary)
+      transition: none !important
+
+@media only screen and (max-width: $mobile)
+  .faq
+    padding: 40px 0 80px
+    .heading
+      margin-bottom: 50px
+    &__item
+      width: 100%
+      margin: 0
+      &-head
+        padding: 30px 20px
+        &-text
+          padding-right: 15px
+          font-size: 22px
+      &-content
+        padding: 0 20px 30px
+      &-grid
+        flex-flow: column nowrap
+      &-col
+        width: 100%
+        &:first-child
+          margin-bottom: 30px
+    &__inner
+      &-head
+        flex-flow: column-reverse nowrap
+        padding: 15px 20px 20px
+        &-text
+          padding-right: 0
+        &-icon
+          margin: 0 auto 15px
+      &-content
+        padding: 0 20px 25px

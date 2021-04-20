@@ -1,0 +1,53 @@
+include ../_ui/heading/heading
+
+mixin profit
+  section.profit.container
+    .wrapper
+      +heading('Расчёт RevShare')
+      p.profit__desc.appear.js-appear(data-delay="0", data-direction="up") Узнай реальный доход от нашей партнёрки и&nbsp;сравни его с другими
+      .profit__tabs.appear.js-appear(data-delay="0", data-direction="up")
+        .profit__tabs-items
+          p.profit__tabs-item.profit__tabs-item--active.js-tab(data-tab="1") Gambling club
+          p.profit__tabs-item.js-tab(data-tab="2") Другая партнёрка
+        .profit__tabs-content.js-tab-content(data-tab="1")
+          .profit__tabs-content-inner
+            .profit__tabs-content-actions
+              .profit__inputs
+                .profit__range
+                  .profit__range-desc
+                    p.profit__range-label Период
+                    p.profit__range-value.js-range-value 1 месяц
+                  input(type="text", name="term", value="1", data-min="1", data-max="12", data-keys='["месяц", "месяца", "месяцев"]').profit__range-input.js-range
+                .profit__range
+                  .profit__range-desc
+                    p.profit__range-label Трафик
+                    p.profit__range-value.js-range-value 1000 игроков
+                  input(type="text", name="trafic", value="1000", data-min="1", data-max="1000", data-keys='["игрок", "игрока", "игроков"]').profit__range-input.js-range
+              .profit__income
+                p.profit__income-text Твой месячный доход составит:
+                p.profit__income-value $
+                  span.js-profit 5000
+            .profit__tabs-content-chart
+              p.profit__tabs-content-chart-month мес
+              canvas.profit__chart.js-chart(data-chart="gc", width="700", height="305")
+        .profit__tabs-content.js-tab-content(data-tab="2")
+          .profit__tabs-content-inner
+            .profit__tabs-content-actions
+              .profit__inputs
+                .profit__range
+                  .profit__range-desc
+                    p.profit__range-label Период
+                    p.profit__range-value.js-range-value 1 месяц
+                  input(type="text", name="term", value="1", data-min="1", data-max="12", data-keys='["месяц", "месяца", "месяцев"]').profit__range-input.js-range
+                .profit__range
+                  .profit__range-desc
+                    p.profit__range-label Трафик
+                    p.profit__range-value.js-range-value 1000 игроков
+                  input(type="text", name="trafic", value="1000", data-min="1", data-max="1000", data-keys='["игрок", "игрока", "игроков"]').profit__range-input.js-range
+              .profit__income
+                p.profit__income-text Твой месячный доход составит:
+                p.profit__income-value $
+                  span.js-profit 350
+            .profit__tabs-content-chart
+              p.profit__tabs-content-chart-month мес
+              canvas.profit__chart.js-chart(data-chart="else", width="700", height="305")

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns#">
+  <head>
+    <title>Gambling Club</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Gambling Club">
+    <meta name="keywords" content="page, keywords">
+    <meta name="theme-color" content="#000000">
+    <meta name="copyright" content="https://t.me/nmihalyov">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <meta name="apple-mobile-web-app-title" content="Gambling Club">
+    <meta name="msapplication-TileImage" content="img/favicons/144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="format-detection" content="telephone=no">
+        <meta property="og:title" content="">
+        <meta property="og:url" content="">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="">
+        <meta property="og:description" content="">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="img/favicons/64x64.png" type="image/png">
+    <link rel="icon" href="img/favicons/152x152.png" type="image/png" sizes="152x152">
+    <link rel="icon" href="img/favicons/256x256.png" type="image/png" sizes="256x256">
+    <link rel="icon" href="img/favicons/512x512.png" type="image/png" sizes="512x512">
+    <link rel="apple-touch-icon" href="img/favicons/152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="img/favicons/256x256.png" sizes="256x256">
+    <link rel="apple-touch-icon" href="img/favicons/512x512.png" sizes="512x512">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="js/libs.min.js"></script>
+    <script defer src="js/common.min.js"></script>
+  </head>
+  <body>
+    <div class="preloader js-preloader">
+      <div class="preloader__logo js-logo"><img class="preloader__logo-main" src="img/logo-main.svg" alt=""/><img class="preloader__logo-sub" src="img/logo-sub.svg" alt=""/></div>
+    </div>
+    <div class="page-wrapper">
+      <header class="header container">
+        <div class="header__wrapper wrapper"><a class="header__logo" href="main.html"></a>
+          <nav class="header__nav"><a class="header__nav-link" href="shop.html">Магазин подарков</a><a class="header__nav-link" href="tournaments.html">Турниры</a><a class="header__nav-link" href="faq.html">FAQ</a></nav>
+          <div class="header__theme js-theme">
+            <div class="header__theme-light"></div>
+            <div class="header__theme-switcher"></div>
+            <div class="header__theme-dark"></div>
+          </div>
+          <div class="header__user">
+            <div class="header__user-main">
+              <p class="header__user-balance"><span>GC</span>149 499 499</p><img class="header__user-avatar" src="img/inhtml/avatar.png" alt=""/>
+              <div class="header__user-arrow"></div>
+            </div>
+            <div class="header__user-sub">
+              <p class="header__user-name">SuperWebmaterDeveloper</p><a class="header__user-link" href="#">Перейти в ЛК</a>
+              <div class="header__user-sub-inner">
+                <div class="header__user-language" data-lang="ru">По-русски</div>
+                <div class="header__user-language" data-lang="eng">In English</div>
+              </div><a class="header__user-logout" href="#">Выйти</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="header header--mobile container">
+        <div class="header__menu">
+          <nav class="header__menu-nav"><a class="header__menu-nav-link" href="shop.html">Магазин подарков</a><a class="header__menu-nav-link" href="tournaments.html">Турниры</a><a class="header__menu-nav-link" href="faq.html">FAQ</a></nav>
+          <div class="header__menu-actions"><a class="header__login" href="login.html">Войти</a><a class="header__signup" href="login.html">Регистрация</a></div>
+        </div>
+        <div class="header__wrapper wrapper">
+          <div class="header__burger js-burger">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div><a class="header__logo" href="main.html"></a>
+          <div class="header__theme js-theme">
+            <div class="header__theme-light"></div>
+            <div class="header__theme-dark"></div>
+          </div>
+        </div>
+      </header>
+      <section class="hero container">
+        <div class="hero__wrapper wrapper">
+          <div class="hero__inner">
+            <div class="hero__roulette"></div>
+            <div class="hero__coin" data-coin="1"></div>
+            <div class="hero__coin" data-coin="2"></div>
+            <div class="hero__coin" data-coin="3"></div>
+            <div class="hero__coin" data-coin="4"></div>
+            <div class="hero__coin" data-coin="5"></div>
+            <div class="hero__jackpot"></div>
+            <h1 class="hero__heading">Международная партнёрская программа в&nbsp;мире гэмблинга</h1>
+            <p class="hero__desc">Высокая конверсия в купе с честной комиссией, приправленная полной прозрачностью всех&nbsp;процессов и дорогими подарками</p>
+            <div class="hero__actions">
+              <div class="hero__buttons"><a class="button" href="javascript:void(0)">Стать партнёром</a><a class="hero__link" href="#">Рассчитать доход</a>
+              </div>
+              <div class="hero__cards">
+                <div class="hero__card">
+                  <div class="hero__card-icon" data-icon="metrics"></div>
+                  <p class="hero__card-text">Живая метрика</p>
+                </div>
+                <div class="hero__card">
+                  <div class="hero__card-icon" data-icon="shaving"></div>
+                  <p class="hero__card-text">Без шейвинга</p>
+                </div>
+              </div>
+            </div>
+            <p class="hero__scroll">листай ниже, чтобы узнать подробности</p>
+          </div>
+        </div>
+      </section>
+      <section class="reasons container">
+        <div class="wrapper">
+          <p class="heading">Почему мы?</p>
+          <div class="reasons__grid">
+            <div class="reasons__item">
+              <div class="reasons__item-image appear js-appear" data-delay="0" data-direction="up">
+                <div class="reasons__item-partners"></div>
+                <div class="reasons__item-eye"></div>
+              </div>
+              <div class="reasons__item-card">
+                <p class="reasons__item-heading">Наши партнёры проверены временем</p>
+                <p class="reasons__item-desc">Стабильно работают с 2002 года</p>
+              </div>
+            </div>
+            <div class="reasons__item">
+              <div class="reasons__item-image appear js-appear" data-delay="250" data-direction="up">
+                <div class="reasons__item-awards"></div>
+                <div class="reasons__item-star" data-star="1"></div>
+                <div class="reasons__item-star" data-star="2"></div>
+                <div class="reasons__item-star" data-star="3"></div>
+              </div>
+              <div class="reasons__item-card">
+                <p class="reasons__item-heading">Турниры и обширная система наград</p>
+                <p class="reasons__item-desc">Больше трафика - больше баллов</p>
+              </div>
+            </div>
+            <div class="reasons__item">
+              <div class="reasons__item-image appear js-appear" data-delay="500" data-direction="up">
+                <div class="reasons__item-bonus"></div>
+                <div class="reasons__item-bill"></div>
+              </div>
+              <div class="reasons__item-card">
+                <p class="reasons__item-heading">Дополнительные <br>$50 при регистрации</p>
+                <p class="reasons__item-desc">Приятный приветственный бонус</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="earning container">
+        <div class="earning__wrapper wrapper">
+          <div class="earning__content">
+            <p class="heading">Ты получишь всё, что заработаешь</p>
+            <p class="earning__desc appear js-appear" data-delay="0" data-direction="up">Прозрачная и живая отчётность по игрокам не даёт возможности скрывать что-либо, ты всегда держишь ситуацию под своим чутким контролем</p>
+            <p class="earning__desc appear js-appear" data-delay="0" data-direction="up">Участвуя в <a href="#">турнирах</a>, зарабатывая баллы, продолжая лить трафик ты будешь поддерживать огненный темп роста лояльности, за что мы непременно тебя вознаградим чем-нибудь из ассортимента нашего <a href="#">магазина</a></p>
+          </div>
+          <div class="earning__stats">
+            <div class="earning__stats-image appear js-appear" data-delay="0" data-direction="left"></div>
+            <div class="earning__stats-cards">
+              <div class="earning__stats-card appear js-appear" data-delay="150" data-direction="left">
+                <p class="earning__stats-num">35%</p>
+                <p class="earning__stats-text">RevShare</p>
+              </div>
+              <div class="earning__stats-card appear js-appear" data-delay="300" data-direction="left">
+                <p class="earning__stats-num">5%</p>
+                <p class="earning__stats-text">Sub-Affiliates</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="start container">
+        <div class="wrapper">
+          <div class="start__head">
+            <p class="heading">Начни зарабатывать прямо сейчас</p>
+            <div class="start__actions"><a class="start__link" href="#">Войти</a><a class="button" href="#">Регистрация</a>
+            </div>
+          </div>
+          <div class="start__content">
+            <p class="start__item appear js-appear" data-delay="0" data-direction="right">Более 6000 парнеров уже с нами</p>
+            <p class="start__item appear js-appear" data-delay="150" data-direction="right">Работай из любого уголка мира</p>
+            <p class="start__item appear js-appear" data-delay="300" data-direction="right">Забудь про ограничения дохода</p>
+            <p class="start__item appear js-appear" data-delay="450" data-direction="right">Получи пожизненный пассивный доход</p>
+          </div>
+          <div class="start__actions start__actions--mobile"><a class="start__link" href="#">Войти</a><a class="button" href="#">Регистрация</a>
+          </div>
+        </div>
+      </section>
+      <section class="profit container">
+        <div class="wrapper">
+          <p class="heading">Расчёт RevShare</p>
+          <p class="profit__desc appear js-appear" data-delay="0" data-direction="up">Узнай реальный доход от нашей партнёрки и&nbsp;сравни его с другими</p>
+          <div class="profit__tabs appear js-appear" data-delay="0" data-direction="up">
+            <div class="profit__tabs-items">
+              <p class="profit__tabs-item profit__tabs-item--active js-tab" data-tab="1">Gambling club</p>
+              <p class="profit__tabs-item js-tab" data-tab="2">Другая партнёрка</p>
+            </div>
+            <div class="profit__tabs-content js-tab-content" data-tab="1">
+              <div class="profit__tabs-content-inner">
+                <div class="profit__tabs-content-actions">
+                  <div class="profit__inputs">
+                    <div class="profit__range">
+                      <div class="profit__range-desc">
+                        <p class="profit__range-label">Период</p>
+                        <p class="profit__range-value js-range-value">1 месяц</p>
+                      </div>
+                      <input class="profit__range-input js-range" type="text" name="term" value="1" data-min="1" data-max="12" data-keys="[&quot;месяц&quot;, &quot;месяца&quot;, &quot;месяцев&quot;]"/>
+                    </div>
+                    <div class="profit__range">
+                      <div class="profit__range-desc">
+                        <p class="profit__range-label">Трафик</p>
+                        <p class="profit__range-value js-range-value">1000 игроков</p>
+                      </div>
+                      <input class="profit__range-input js-range" type="text" name="trafic" value="1000" data-min="1" data-max="1000" data-keys="[&quot;игрок&quot;, &quot;игрока&quot;, &quot;игроков&quot;]"/>
+                    </div>
+                  </div>
+                  <div class="profit__income">
+                    <p class="profit__income-text">Твой месячный доход составит:</p>
+                    <p class="profit__income-value">$<span class="js-profit">5000</span></p>
+                  </div>
+                </div>
+                <div class="profit__tabs-content-chart">
+                  <p class="profit__tabs-content-chart-month">мес</p>
+                  <canvas class="profit__chart js-chart" data-chart="gc" width="700" height="305"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="profit__tabs-content js-tab-content" data-tab="2">
+              <div class="profit__tabs-content-inner">
+                <div class="profit__tabs-content-actions">
+                  <div class="profit__inputs">
+                    <div class="profit__range">
+                      <div class="profit__range-desc">
+                        <p class="profit__range-label">Период</p>
+                        <p class="profit__range-value js-range-value">1 месяц</p>
+                      </div>
+                      <input class="profit__range-input js-range" type="text" name="term" value="1" data-min="1" data-max="12" data-keys="[&quot;месяц&quot;, &quot;месяца&quot;, &quot;месяцев&quot;]"/>
+                    </div>
+                    <div class="profit__range">
+                      <div class="profit__range-desc">
+                        <p class="profit__range-label">Трафик</p>
+                        <p class="profit__range-value js-range-value">1000 игроков</p>
+                      </div>
+                      <input class="profit__range-input js-range" type="text" name="trafic" value="1000" data-min="1" data-max="1000" data-keys="[&quot;игрок&quot;, &quot;игрока&quot;, &quot;игроков&quot;]"/>
+                    </div>
+                  </div>
+                  <div class="profit__income">
+                    <p class="profit__income-text">Твой месячный доход составит:</p>
+                    <p class="profit__income-value">$<span class="js-profit">350</span></p>
+                  </div>
+                </div>
+                <div class="profit__tabs-content-chart">
+                  <p class="profit__tabs-content-chart-month">мес</p>
+                  <canvas class="profit__chart js-chart" data-chart="else" width="700" height="305"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="gifts container">
+        <div class="gifts__wrapper wrapper">
+          <div class="gifts__car js-parallax" data-rellax-percentage="0.5">
+            <div class="gifts__car-image"></div>
+            <div class="gifts__car-blocks js-parallax" data-rellax-speed="0.2" data-rellax-percentage="0.5"></div>
+          </div>
+          <div class="gifts__phone js-parallax" data-rellax-percentage="0.5">
+            <div class="gifts__phone-image"></div>
+            <div class="gifts__phone-blocks js-parallax" data-rellax-speed="0.2" data-rellax-percentage="0.5"></div>
+          </div>
+          <p class="heading">Получай подарки за трафик</p>
+          <div class="appear js-appear" data-delay="0" data-direction="up">
+            <p class="gifts__desc">Приглашая игроков к нашим партнёрам ты зарабатываешь не только деньги, но и баллы GC, которые можешь сразу обменять на всё, что угодно - от нового телефона до квартиры в крупном городе, спорткара, или даже яхты</p><a class="button gifts__btn" href="shop.html">Перейти в магазин</a>
+          </div>
+          <div class="gifts__grid">
+            <div class="gifts__grid-waypoint"></div>
+            <div class="gifts__item">
+              <div class="gifts__item-image appear js-appear" data-delay="0" data-direction="up" data-image="offers"></div>
+              <p class="gifts__item-desc appear js-appear" data-delay="150" data-direction="up">Лей трафик <br>на офферы</p>
+            </div>
+            <div class="gifts__item">
+              <div class="gifts__item-image appear js-appear" data-delay="0" data-direction="up" data-image="points"></div>
+              <p class="gifts__item-desc appear js-appear" data-delay="150" data-direction="up">Получай <br>баллы</p>
+            </div>
+            <div class="gifts__item">
+              <div class="gifts__item-image appear js-appear" data-delay="150" data-direction="up" data-image="spend"></div>
+              <p class="gifts__item-desc appear js-appear" data-delay="150" data-direction="up">Трать их на всё, <br>что пожелаешь</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reliable container">
+        <div class="reliable__image">
+          <div class="reliable__image-inner">
+            <div class="reliable__image-speak" data-speak="1"></div>
+            <div class="reliable__image-speak" data-speak="2"></div>
+            <div class="reliable__image-pic"></div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="reliable__head">
+            <p class="heading">Мы ищем надёжных людей</p>
+            <p class="reliable__desc appear js-appear" data-delay="0" data-direction="up">Нам важно долгосрочное сотрудничество, взаимопонимание и продуктивность ради обоюдной&nbsp;выгоды</p>
+          </div>
+          <div class="reliable__content">
+            <div class="reliable__partners appear js-appear" data-delay="0" data-direction="left">
+              <p class="reliable__partners-heading">Топ партнёров</p>
+              <select class="js-reliable-term select js-select" name="term">
+                <option value="1month">За один месяц</option>
+                <option value="3month">За 3 месяца</option>
+                <option value="6month">За 6 месяцев</option>
+                <option value="total">За все время</option>
+              </select>
+              <p class="reliable__partners-desc">Рейтинговая система не только позволяет видеть возможности потенциальным партнёрам, но и даёт действующим уверенности в том, что они работают в сплочённой команде, каждый участник которой трудится не за просто так</p>
+            </div>
+            <div class="reliable__table appear js-appear" data-delay="150" data-direction="left">
+              <div class="reliable__table-inner" data-table="1month">
+                <div class="table">
+                  <div class="table__head">
+                    <p class="table__head-cell" data-cell="place">Место</p>
+                    <p class="table__head-cell" data-cell="name">Имя</p>
+                    <p class="table__head-cell" data-cell="players">Игроки</p>
+                    <p class="table__head-cell" data-cell="profit">Доход</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">1</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">2</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">3</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">4</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">5</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="reliable__table-inner" data-table="3month">
+                <div class="table">
+                  <div class="table__head">
+                    <p class="table__head-cell" data-cell="place">Место</p>
+                    <p class="table__head-cell" data-cell="name">Имя</p>
+                    <p class="table__head-cell" data-cell="players">Игроки</p>
+                    <p class="table__head-cell" data-cell="profit">Доход</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">1</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">2</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">3</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">4</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">5</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="reliable__table-inner" data-table="6month">
+                <div class="table">
+                  <div class="table__head">
+                    <p class="table__head-cell" data-cell="place">Место</p>
+                    <p class="table__head-cell" data-cell="name">Имя</p>
+                    <p class="table__head-cell" data-cell="players">Игроки</p>
+                    <p class="table__head-cell" data-cell="profit">Доход</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">1</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">2</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">3</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">4</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">5</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="reliable__table-inner" data-table="total">
+                <div class="table">
+                  <div class="table__head">
+                    <p class="table__head-cell" data-cell="place">Место</p>
+                    <p class="table__head-cell" data-cell="name">Имя</p>
+                    <p class="table__head-cell" data-cell="players">Игроки</p>
+                    <p class="table__head-cell" data-cell="profit">Доход</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">1</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">2</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">3</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">4</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                  <div class="table__row">
+                    <p class="table__row-cell" data-cell="place">5</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                    <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                    <p class="table__row-cell" data-cell="players">101 250</p>
+                    <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="awaits container">
+        <div class="wrapper">
+          <p class="heading">Что тебя ждёт?</p>
+          <div class="awaits__content">
+            <div class="awaits__block">
+              <p class="awaits__text">Закрытые мероприятия</p>
+            </div>
+            <div class="awaits__slider">
+              <div class="awaits__slider-inner">
+                <div class="awaits__slide js-slide" data-slide="1" data-text="Закрытые мероприятия">
+                  <div class="awaits__slide-img"></div>
+                </div>
+                <div class="awaits__slide js-slide" data-slide="2" data-text="Lorem ipsum">
+                  <div class="awaits__slide-img"></div>
+                </div>
+                <div class="awaits__slide js-slide" data-slide="3" data-text="Lorem ipsum dolor">
+                  <div class="awaits__slide-img"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tournaments container">
+        <div class="wrapper">
+          <p class="heading">Турниры</p>
+          <div class="tournaments__grid">
+            <div class="tournaments__select appear js-appear" data-delay="0" data-direction="left">
+              <div class="tournaments__select-item tournaments__select-item--active js-tournament" data-tournament="1">
+                <div class="tournaments__select-item-head">
+                  <p class="tournaments__select-item-title">Охота на хайроллера</p>
+                  <p class="tournaments__select-item-date">до 31.02</p>
+                </div>
+                <p class="tournaments__select-item-desc">Победитель определяется по сумме GGR с привлечённых за период конкурса</p>
+              </div>
+              <div class="tournaments__select-item js-tournament" data-tournament="2">
+                <div class="tournaments__select-item-head">
+                  <p class="tournaments__select-item-title">Добро пожаловать</p>
+                  <p class="tournaments__select-item-date">до 31.02</p>
+                </div>
+                <p class="tournaments__select-item-desc">Победитель определяется по&nbsp;количеству привлеченных FD за&nbsp;период проведения</p>
+              </div>
+              <div class="tournaments__select-item js-tournament" data-tournament="3">
+                <div class="tournaments__select-item-head">
+                  <p class="tournaments__select-item-title">Набор джентльмена</p>
+                  <p class="tournaments__select-item-date">до 31.02</p>
+                </div>
+                <p class="tournaments__select-item-desc">Победит тот, кто потратит более 150 000 баллов в магазине подарков до 29.02</p>
+              </div>
+            </div>
+            <div class="tournaments__content appear js-appear" data-delay="150" data-direction="left">
+              <div class="tournaments__content-table js-tournament-table" data-tournament="1">
+                <div class="tournaments__content-table-inner">
+                  <div class="table">
+                    <div class="table__head">
+                      <p class="table__head-cell" data-cell="place">Место</p>
+                      <p class="table__head-cell" data-cell="name">Имя</p>
+                      <p class="table__head-cell" data-cell="players">Игроки</p>
+                      <p class="table__head-cell" data-cell="profit">Доход</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">1</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">2</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">3</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">4</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">5</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tournaments__content-actions"><a class="button" href="tournament.html">Принять участие</a><a class="tournaments__content-link" href="tournaments.html">Смотреть турнирную таблицу</a>
+                </div>
+              </div>
+              <div class="tournaments__content-table js-tournament-table" data-tournament="2">
+                <div class="tournaments__content-table-inner">
+                  <div class="table">
+                    <div class="table__head">
+                      <p class="table__head-cell" data-cell="place">Место</p>
+                      <p class="table__head-cell" data-cell="name">Имя</p>
+                      <p class="table__head-cell" data-cell="players">Игроки</p>
+                      <p class="table__head-cell" data-cell="profit">Доход</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">1</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">2</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">3</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">4</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">5</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tournaments__content-actions"><a class="button" href="tournament.html">Принять участие</a><a class="tournaments__content-link" href="tournaments.html">Смотреть турнирную таблицу</a>
+                </div>
+              </div>
+              <div class="tournaments__content-table js-tournament-table" data-tournament="3">
+                <div class="tournaments__content-table-inner">
+                  <div class="table">
+                    <div class="table__head">
+                      <p class="table__head-cell" data-cell="place">Место</p>
+                      <p class="table__head-cell" data-cell="name">Имя</p>
+                      <p class="table__head-cell" data-cell="players">Игроки</p>
+                      <p class="table__head-cell" data-cell="profit">Доход</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">1</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">2</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">3</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">4</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                    <div class="table__row">
+                      <p class="table__row-cell" data-cell="place">5</p><img class="table__row-cell" src="img/inhtml/avatar.png" alt="" data-cell="avatar"/>
+                      <p class="table__row-cell" data-cell="name">Вебмастер Фломастер</p>
+                      <p class="table__row-cell" data-cell="players">101 250</p>
+                      <p class="table__row-cell" data-cell="profit">$29 500.10</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tournaments__content-actions"><a class="button" href="tournament.html">Принять участие</a><a class="tournaments__content-link" href="tournaments.html">Смотреть турнирную таблицу</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer container">
+        <div class="wrapper">
+          <div class="footer__top">
+            <div class="footer__info">
+              <div class="footer__logo"></div>
+              <nav class="footer__nav"><a class="footer__nav-link" href="policy.html">Политика конфиденциальности</a><a class="footer__nav-link" href="policy.html">Условия и положения</a><a class="footer__nav-link" href="#">FAQ</a></nav>
+            </div><a class="footer__btn" href="#">Мы в Telegram</a>
+          </div>
+          <div class="footer__bottom">
+            <p class="footer__copyright">2020 All rights reserved</p>
+            <div class="footer__payments">
+              <div class="footer__payment" data-method="gpwa"></div>
+              <div class="footer__payment" data-method="visa"></div>
+              <div class="footer__payment" data-method="mastercard"></div>
+              <div class="footer__payment" data-method="webmoney"></div>
+              <div class="footer__payment" data-method="paypal"></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+include ../_ui/heading/heading
+
+mixin awaits
+  section.awaits.container
+    .wrapper
+      +heading('Что тебя ждёт?')
+      .awaits__content
+        .awaits__block
+          p.awaits__text Закрытые мероприятия
+        .awaits__slider
+          .awaits__slider-inner
+            .awaits__slide.js-slide(data-slide="1", data-text="Закрытые мероприятия")
+              .awaits__slide-img
+            .awaits__slide.js-slide(data-slide="2", data-text="Lorem ipsum")
+              .awaits__slide-img
+            .awaits__slide.js-slide(data-slide="3", data-text="Lorem ipsum dolor")
+              .awaits__slide-img

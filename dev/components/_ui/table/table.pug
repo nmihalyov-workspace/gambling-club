@@ -1,0 +1,37 @@
+mixin table(small)
+  .table(class=`${small ? 'table--small' : ''}`)
+    .table__head
+      p.table__head-cell(data-cell="place") Место
+      p.table__head-cell(data-cell="name") Имя
+      p.table__head-cell(data-cell="players") Игроки
+      p.table__head-cell(data-cell="profit") Доход
+    .table__row
+      p.table__row-cell(data-cell="place") 1
+      img(src="img/inhtml/avatar.png", alt="", data-cell="avatar").table__row-cell
+      p.table__row-cell(data-cell="name") Вебмастер Фломастер
+      p.table__row-cell(data-cell="players") 101 250
+      p.table__row-cell(data-cell="profit") $29 500.10
+    .table__row
+      p.table__row-cell(data-cell="place") 2
+      img(src="img/inhtml/avatar.png", alt="", data-cell="avatar").table__row-cell
+      p.table__row-cell(data-cell="name") Вебмастер Фломастер
+      p.table__row-cell(data-cell="players") 101 250
+      p.table__row-cell(data-cell="profit") $29 500.10
+    .table__row
+      p.table__row-cell(data-cell="place") 3
+      img(src="img/inhtml/avatar.png", alt="", data-cell="avatar").table__row-cell
+      p.table__row-cell(data-cell="name") Вебмастер Фломастер
+      p.table__row-cell(data-cell="players") 101 250
+      p.table__row-cell(data-cell="profit") $29 500.10
+    .table__row
+      p.table__row-cell(data-cell="place") 4
+      img(src="img/inhtml/avatar.png", alt="", data-cell="avatar").table__row-cell
+      p.table__row-cell(data-cell="name") Вебмастер Фломастер
+      p.table__row-cell(data-cell="players") 101 250
+      p.table__row-cell(data-cell="profit") $29 500.10
+    .table__row
+      p.table__row-cell(data-cell="place") 5
+      img(src="img/inhtml/avatar.png", alt="", data-cell="avatar").table__row-cell
+      p.table__row-cell(data-cell="name") Вебмастер Фломастер
+      p.table__row-cell(data-cell="players") 101 250
+      p.table__row-cell(data-cell="profit") $29 500.10

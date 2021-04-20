@@ -1,0 +1,65 @@
+.tournament-hero
+  padding: 40px 0
+  &__card
+    position: relative
+    padding: 55px 700px 65px 100px
+    border-radius: 20px
+    background-color: transparentize(#0E2B49, 0.25)
+    .heading
+      color: $white
+    &-content
+      display: flex
+      flex-flow: column nowrap
+      justify-content: space-between
+      align-items: stretch
+      min-height: 380px
+    &-desc
+      margin: 20px 0 40px
+      color: $white
+    &-time
+      color: $white
+    &-date
+      color: $white
+      line-height: 1.2
+      font:
+        family: 'Roketfont', Helvetica, sans-serif
+        size: 54px
+    &-image
+      position: absolute
+      top: 27px
+      right: 20px
+      width: 490px
+      height: 446px
+      background:
+        size: contain
+        position: center
+        repeat: no-repeat
+      &[data-image="main"]
+        background-image: url('../img/illustrations/main-dark.svg')
+
+@media only screen and (max-width: $mobile)
+  .tournament-hero
+    padding: 40px 0 50px
+    &__card
+      display: flex
+      flex-flow: column-reverse nowrap
+      padding: 40px 20px
+      .heading
+        text-align: center
+        font-size: 36px
+      &-content
+        min-height: 0
+      &-desc
+        text-align: center
+      &-time
+        margin-bottom: 5px
+        text-align: center
+      &-date
+        text-align: center
+        font-size: 36px
+      &-image
+        position: static
+        width: 100%
+        height: 0
+        margin-bottom: 40px
+        padding-top: 90%

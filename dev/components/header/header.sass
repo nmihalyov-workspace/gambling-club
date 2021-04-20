@@ -1,0 +1,331 @@
+.dark-theme .header
+  &__logo
+    background-image: url('../img/logo-dark.svg')
+  &__theme
+    &-light
+      background-image: url('../img/icons/sun-dark.svg')
+    &-dark
+      background-image: url('../img/icons/moon-dark.svg')
+  &__user
+    &-balance
+      background-color: #0E2B49
+
+.header
+  padding: 20px 0
+  background-color: var(--bg-primary)
+  &--mobile
+    display: none
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+  &__logo
+    width: 189px
+    height: 37px
+    background:
+      image: url('../img/logo.svg')
+      size: contain
+      position: center
+      repeat: no-repeat
+    &:hover
+      opacity: 1
+  &__nav
+    &-link
+      padding: 5px
+      &:not(:last-child)
+        margin-right: 50px
+      &--current
+        pointer-events: none
+        border-bottom: 1px solid $blue
+  &__theme
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    cursor: pointer
+    &-light,
+    &-dark
+      width: 16px
+      height: 16px
+      background:
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-light
+      background-image: url('../img/icons/sun.svg')
+    &-switcher
+      position: relative
+      width: 32px
+      height: 16px
+      margin: 0 8px
+      border-radius: 16px
+      background-color: #9DAFC1
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 3px
+        left: 3px
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background-color: #fff
+        transition: all .3s ease
+      &--dark
+        background-color: $blue
+        &:before
+          left: 19px
+    &-dark
+      background-image: url('../img/icons/moon.svg')
+  &__login
+    font-weight: 600
+  &__signup
+    margin-left: 50px
+    color: $blue
+    font-weight: 600
+  &__user
+    position: relative
+    max-width: 215px
+    &--shown
+      .header__user-arrow
+        transform: rotate(180deg)
+    &-main
+      z-index: 1
+      position: relative
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      cursor: pointer
+    &-avatar
+      max-width: 30px
+      max-height: 30px
+      width: auto
+      height: auto
+      margin-right: 10px
+    &-balance
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      margin-right: 12px
+      padding: 7px 12px
+      background-color: #E0E6EF
+      border-radius: 20px
+      font-size: 16px
+      span
+        margin-right: 10px
+        color: $blue
+        font-size: 13px
+    &-name
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      font:
+        size: 16px
+        weight: 600
+    &-arrow
+      width: 11px
+      height: 7px
+      transition: transform .3s ease
+      background:
+        image: url('../img/icons/caret-blue-big.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-sub
+      z-index: 2
+      display: none
+      position: absolute
+      top: -15px
+      left: -20px
+      width: 256px
+      padding: 15px 20px
+      border-radius: 20px
+      background-color: var(--bg-secondary)
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2)
+      &-inner
+        margin: 10px 0
+        padding: 6px 0
+        border-top: 1px solid #9DAFC1
+        border-bottom: 1px solid #9DAFC1
+    &-language
+      position: relative
+      margin: 6px 0
+      cursor: pointer
+      font:
+        size: 14px
+        weight: 500
+      &--toggled
+        &:after
+          transform: rotate(180deg)
+      &:not(:first-child)
+        display: none
+      &:first-child
+        &:after
+          content: ''
+          position: absolute
+          top: 7px
+          display: block
+          width: 11px
+          height: 7px
+          transition: transform .3s ease
+          background:
+            image: url('../img/icons/caret-blue-big.svg')
+            size: contain
+            position: center
+            repeat: no-repeat
+      &[data-lang="eng"]
+        &:after
+          left: 97px
+        &:before
+          left: 70px
+          background-image: url('../img/icons/eng.svg')
+      &[data-lang="ru"]
+        &:after
+          left: 107px
+        &:before
+          left: 80px
+          background-image: url('../img/icons/ru.svg')
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        cursor: pointer
+        background:
+          position: center
+          size: cover
+          repeat: no-repeat
+    &-link
+      display: block
+      margin-top: 5px
+      color: $blue
+      font:
+        size: 14px
+        weight: 500
+    &-logout
+      font:
+        size: 14px
+        weight: 500
+
+@media only screen and (max-width: $mobile)
+  .dark-theme .header
+    &__theme
+      &-dark
+        display: none
+      &-light
+        display: block
+  .header
+    display: none
+    padding: 10px 0
+    &--mobile
+      z-index: 999
+      position: fixed
+      display: block
+      top: 0
+      left: 0
+      width: 100%
+      background-color: var(--bg-primary)
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2)
+    &__wrapper
+      z-index: 2
+      position: relative
+      background-color: var(--bg-primary)
+    &__burger
+      z-index: 1
+      position: relative
+      display: flex
+      flex-flow: column nowrap
+      justify-content: center
+      align-items: center
+      width: 20px
+      height: 16px
+      cursor: pointer
+      &--active
+        div:nth-child(1)
+          width: 0%
+          left: 50%
+        div:nth-child(2)
+          background-color: $blue !important
+          transform: rotate(45deg)
+        div:nth-child(3)
+          background-color: $blue !important
+          transform: rotate(-45deg)
+        div:nth-child(4)
+          width: 0%
+          left: 50%
+      div
+        position: absolute
+        left: 0
+        width: 100%
+        height: 2px
+        background-color: var(--text-primary)
+        transition: all .3s ease
+        &:nth-child(1)
+          top: 0
+        &:nth-child(2),
+        &:nth-child(3)
+          top: 7px
+        &:nth-child(4)
+          top: 14px
+    &__logo
+      width: 140px
+      height: 28px
+    &__theme
+      &-light
+        display: none
+    &__menu
+      z-index: 1
+      position: fixed
+      top: 48px
+      left: 0
+      display: flex
+      flex-flow: column nowrap
+      justify-content: center
+      align-items: center
+      width: 100%
+      padding: 40px 0
+      height: calc(100% - 48px)
+      background-color: var(--bg-primary)
+      transform: translateY(-120%) translateZ(0)
+      transition: transform .3s ease
+      &--active
+        transform: translateY(0) translateZ(0)
+        .header__menu-nav-link
+          opacity: 1
+          transform: none
+      &-nav
+        display: flex
+        flex-flow: column nowrap
+        justify-content: flex-start
+        align-items: center
+        margin-top: auto
+        &-link
+          opacity: 0
+          padding: 5px
+          transform: translateY(-200%)
+          text-align: center
+          font-size: 24px
+          &:not(:last-child)
+            margin: 0 0 15px
+          &:first-child
+            transition: all .5s ease .2s
+          &:nth-child(2)
+            transition: all .5s ease .15s
+          &:nth-child(3)
+            transition: all .5s ease .1s
+          &--current
+            pointer-events: none
+            border-bottom: 1px solid $blue
+      &-actions
+        display: flex
+        flex-flow: row nowrap
+        justify-content: center
+        align-items: center
+        margin-top: auto
+    &__language
+      margin-left: 50px

@@ -1,0 +1,127 @@
+.tournaments
+  padding: 100px 0
+  &__grid
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-end
+    margin-top: 35px
+  &__select
+    &-item
+      width: 400px
+      height: 185px
+      padding: 30px
+      border-radius: 20px
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2)
+      background-color: transparentize($white, 0.25)
+      backdrop-filter: blur(10px)
+      color: #0E2B49
+      cursor: pointer
+      &:not(:last-child)
+        margin-bottom: 20px
+      &:hover
+        background-color: transparentize($blue, 0.25)
+        color: $white
+      &--active
+        pointer-events: none
+        background-color: transparentize($blue, 0.25)
+        color: $white
+      &-head
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 15px
+        transition: all .1s ease
+      &-title
+        font:
+          size: 24px
+          weight: 700
+      &-desc
+        line-height: 1.44
+  &__content
+    &-table
+      &:not(:first-child)
+        display: none
+      .table__row
+        &:not(:last-child)
+          margin-bottom: 30px
+    &-actions
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+      margin-top: 55px
+    &-link
+      color: $blue
+
+@media only screen and (max-width: $mobile)
+  .tournaments
+    padding: 40px 0 50px
+    &__grid
+      flex-flow: column nowrap
+      margin-top: 50px
+    &__select
+      margin-bottom: 50px
+      &-item
+        width: 100%
+        height: auto
+        padding: 30px 20px
+        &:not(:last-child)
+          margin-bottom: 30px
+        &--active
+          .tournaments__select-item
+            &-head
+              margin-bottom: 15px
+              &:after
+                opacity: 0
+            &-date
+              opacity: 1
+            &-desc
+              display: block
+        &-head
+          position: relative
+          margin-bottom: 0
+          &:after
+            z-index: 1
+            content: ''
+            position: absolute
+            right: 0
+            right: 0
+            width: 30px
+            height: 30px
+            background:
+              image: url('../img/icons/open.svg')
+              size: contain
+              position: center
+              repeat: no-repeat
+        &-title
+          line-height: 1.25
+        &-date
+          z-index: 2
+          position: relative
+          opacity: 0
+          flex-shrink: 0
+        &-desc
+          display: none
+    &__content
+      width: 100%
+      &-table
+        &-inner
+          position: relative
+          white-space: nowrap
+          overflow: auto
+          width: 100vw
+          margin: 0 calc(-50vw + 50%)
+          padding: 0 calc(50vw - 50%)
+          -ms-overflow-style: none
+          scrollbar-width: none
+          &::-webkit-scrollbar
+            display: none
+          .table
+            display: inline-block
+      &-actions
+        flex-flow: column nowrap
+        margin-top: 50px
+      &-link
+        margin-top: 35px
